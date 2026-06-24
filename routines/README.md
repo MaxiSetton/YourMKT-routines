@@ -7,7 +7,7 @@ resultado en Supabase, que es lo que la web muestra.
 | Routine | Archivo (prompt versionado) | Paso del flujo | Qué hace | Peso |
 |---|---|---|---|---|
 | **1 · Calendario** | [`1-calendario.md`](1-calendario.md) | 2 | Piensa los posts de cada día → siembra el calendario (posts borrador + plan de assets + qué pedir al usuario) | liviana |
-| **2 · Dirección de pieza** | [`2-direccion-pieza.md`](2-direccion-pieza.md) | 3 + 4 | Piensa UN post a fondo → escribe `spec` validado en `posts.spec`. Itera con observaciones | liviana |
+| **2 · Dirección de pieza** | [`2-direccion-pieza.md`](2-direccion-pieza.md) | 3 + 4 | Piensa los posts a fondo (**todos de una**, o uno) → `spec` validado en `posts.spec`. Re-piensa/itera un día | liviana |
 | **3 · Producción** | [`3-produccion.md`](3-produccion.md) | 5 | Genera recursos, renderiza y **publica** la pieza. Itera con observaciones | **pesada** |
 
 Cómo se relacionan: la **DB es el bus**. Routine 1 siembra `posts`; Routine 2 lee un post y le escribe
@@ -64,26 +64,47 @@ No necesitás `NEXT_PUBLIC_SUPABASE_ANON_KEY` (se usa la service-role), ni `MODA
 > / `HF_I2V_PROVIDER` / `HF_IMG_PROVIDER` (alternativos live: replicate, together, wavespeed).
 
 ### 4. Allowlist de red (egress)
-Por defecto el environment solo llega a registries/GitHub. En la **network policy** del environment
-agregá estos dominios (o las llamadas fallan). **Obligatorios:**
+Lista **completa** (auditada contra cada llamada de red del código). Si tu policy es allowlist explícita
+(no "allow all"), agregá TODO esto o una routine falla en silencio.
 
+**A) Obligatorios — dominios custom (hay que agregarlos sí o sí):**
 ```
-qhjuyxuastyubtlodwym.supabase.co     # DB + Storage (las 3 routines)
-router.huggingface.co                # inferencia HF: FLUX + Wan (Routine 3)
-huggingface.co                       # descarga de pesos OmniVoice + faster-whisper (setup + Routine 3)
-cdn-lfs.huggingface.co               # idem (LFS)
-cdn-lfs-us-1.huggingface.co          # idem (LFS)
-cas-bridge.xethub.hf.co              # idem (HF Xet, pesos grandes nuevos)
-download.pytorch.org                 # wheel CPU de torch (setup.sh)
+qhjuyxuastyubtlodwym.supabase.co     # DB + Storage              → las 3 routines
+router.huggingface.co                # inferencia FLUX + Wan      → Routine 3 (gen:hf)
+huggingface.co                       # pesos OmniVoice + whisper  → setup + Routine 3
+cdn-lfs.huggingface.co               # pesos (LFS)                → setup + Routine 3
+cdn-lfs-us-1.huggingface.co          # pesos (LFS)                → setup + Routine 3
+cas-bridge.xethub.hf.co              # pesos (HF Xet)             → setup + Routine 3
+download.pytorch.org                 # wheel CPU de torch         → setup
+storage.googleapis.com               # Chromium headless Remotion → setup (remotion browser ensure)
+fonts.gstatic.com                    # fuentes del render         → Routine 3 (@remotion/google-fonts)
+fonts.googleapis.com                 # CSS de las fuentes         → Routine 3 (render)
 ```
 
-**Sumar SOLO si falla la descarga del resultado de un provider** (algunos devuelven el archivo por su
-propio CDN en vez de por el router): `fal.media`, `*.fal.run`, `*.wavespeed.ai`, `*.replicate.delivery`,
-`api.together.xyz`. **Opcionales** (solo si usás `fetch:audio`): `freesound.org`, `cdn.freesound.org`,
-`pixabay.com`.
+**B) Resultado de los providers de HF** (FLUX/Wan suelen devolver el archivo por su CDN, no por el
+router) — agregá los de los providers que uses (default: fal-ai imágenes+t2v, wavespeed i2v):
+```
+*.fal.ai   *.fal.run   *.fal.media          # fal-ai (FLUX, Wan2.2-5B t2v)
+*.wavespeed.ai                               # wavespeed (Wan2.2-14B i2v)
+*.replicate.delivery   api.together.xyz      # solo si cambiás de provider con HF_*_PROVIDER
+```
 
-> Si la plataforma te ofrece un modo "allow all egress" para el environment y estás cómodo (el sandbox
-> es efímero y privado), es lo más simple para el preview; si no, usá la lista de arriba.
+**C) Registries — normalmente ya cubiertos por el tier "Trusted"** (agregalos solo si tu policy es 100%
+explícita y bloquea hasta esto):
+```
+registry.npmjs.org                           # npm install (setup)
+pypi.org   files.pythonhosted.org            # pip install (setup)
+archive.ubuntu.com   security.ubuntu.com     # apt (setup)
+github.com   *.githubusercontent.com         # clone del repo (toda routine)
+```
+
+**D) Opcionales — solo si el spec pide música/SFX de bancos (`fetch:audio`):**
+```
+freesound.org   cdn.freesound.org   pixabay.com   api.jamendo.com
+```
+
+> Si la plataforma te ofrece "allow all egress" para el environment y estás cómodo (el sandbox es
+> efímero y privado), es lo más simple para el preview; si no, usá las listas A+B (y C si hace falta).
 
 ### 5. Migración en Supabase (una vez)
 Las Routines 2↔3 se pasan el spec por `posts.spec`. Corré en el SQL editor:
@@ -132,9 +153,11 @@ Body:
 { "negocio": "bruma", "campania": "Conocé Bruma", "reseed": false }
 ```
 
-**Routine 2 — Dirección** (pensar/iterar un post). `observaciones` vacío = primera dirección:
+**Routine 2 — Dirección.** Sin `dia` dirige **todas** las piezas de la campaña (batch, resumible); con
+`dia` dirige/re-piensa una sola (`observaciones` vacío = primera dirección, con texto = iteración):
 ```json
-{ "negocio": "bruma", "campania": "Conocé Bruma", "dia": 4, "formato": "reel", "observaciones": "" }
+{ "negocio": "bruma", "campania": "Conocé Bruma" }                                              // todas
+{ "negocio": "bruma", "campania": "Conocé Bruma", "dia": 4, "formato": "reel", "observaciones": "" }  // una
 ```
 
 **Routine 3 — Producción** (hacer/iterar el post) — mismos params que la 2:
