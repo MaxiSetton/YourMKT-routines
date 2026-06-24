@@ -31,6 +31,9 @@ o itera una sola). **Itera** con observaciones (re-genera un clip, cambia la mú
 
 ## Pasos
 
+> **Preparación (primero, siempre):** corré `npm install` antes de cualquier `npm run`. El repo se clona
+> fresco por corrida (sin `node_modules`); el `setup.sh` dejó el cache de npm caliente, así que es rápido.
+
 ### 0 · Determiná el modo y la lista de piezas a producir (service-role key)
 
 - **Con params** (modo B): la lista es esa sola pieza (`negocio`/`campania`/`dia`/`formato`).

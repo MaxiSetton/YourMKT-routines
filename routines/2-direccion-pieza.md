@@ -48,6 +48,9 @@ y **avisá** que usás defaults. Si viene con datos pero falta `campania`, repor
 
 ## Pasos
 
+> **Preparación (primero, siempre):** corré `npm install` antes de cualquier `npm run`. El repo se clona
+> fresco por corrida (sin `node_modules`); el `setup.sh` dejó el cache de npm caliente, así que es rápido.
+
 ### 0 · Resolvé el modo y la lista de piezas (service-role key)
 ```
 GET {URL}/rest/v1/businesses?nombre=ilike.*<negocio>*&select=id
