@@ -65,9 +65,11 @@ alter table public.posts add column if not exists spec jsonb;
 ```
 
 ### 6. Creá las 3 routines
-La creación **no está en el API** del preview → se hace en la UI (claude.ai/code/routines) o por CLI
-(`/schedule`). Creá 3 routines apuntando al repo + environment, y en el **prompt guardado** de cada una
-pegá el puntero correspondiente de la sección "Prompts guardados" de abajo. No hace falta schedule: se
+La creación práctica **se hace en la UI** (claude.ai/code/routines) o por CLI (`/schedule`): el trigger
+necesita un **environment ya configurado** (el de los pasos 2–4) y el `POST /v1/code/triggers` exige un
+`session_request`/`job_config` que lo referencia — por eso no se puede crear "en seco" desde afuera antes
+de tener el environment. Creá 3 routines apuntando al repo + environment, y en el **prompt guardado** de
+cada una pegá el puntero correspondiente de "Prompts guardados" de abajo. No hace falta schedule: se
 disparan por API. (Si querés además un barrido nocturno, dales un cron.)
 
 Anotá el **routine_id** y el **token** de cada routine (los da su página) — n8n los usa.
