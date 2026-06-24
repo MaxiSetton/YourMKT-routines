@@ -1,0 +1,141 @@
+{
+  "id": "conoce-bruma-dia4-v5",
+  "carpeta": "bruma-conoce-bruma",
+  "arquetipo": "promo",
+  "formato": "reel",
+  "aspect": "9:16",
+  "fps": 30,
+  "duracion_seg": 23,
+  "marca": {
+    "nombre": "Bruma Café",
+    "colores": {
+      "primario": "#a0522d",
+      "secundario": "#d2b48c",
+      "acento": "#6b8e23",
+      "fondo": "#fffdd0",
+      "texto": "#2c1e16",
+      "textoInverso": "#fffdd0"
+    },
+    "fuenteTitulo": "Playfair Display",
+    "fuenteTexto": "Inter"
+  },
+  "escenas": [
+    {
+      "id": "corte-hook",
+      "rol": "hook",
+      "t_in": 0,
+      "t_out": 2.64,
+      "sync_word_idx": 7,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Manos del barista preparando flat white, enganche visual humano",
+        "fuentes": [
+          {
+            "tipo": "asset_cliente",
+            "archivo": "asset-proceso-1.mp4"
+          }
+        ]
+      },
+      "overlays": [
+        {
+          "componente": "BrandTag",
+          "props": {
+            "logo": "logo.png",
+            "text": "Bruma Café"
+          }
+        }
+      ]
+    },
+    {
+      "id": "corte-tueste",
+      "rol": "producto",
+      "t_in": 2.64,
+      "t_out": 14.46,
+      "sync_word_idx": 28,
+      "scrim": "none",
+      "visual": {
+        "intencion": "Granos tostados cayendo, vapor, textura",
+        "fuentes": [
+          {
+            "tipo": "video_generado",
+            "archivo": "gen-granos-tueste-v3.mp4",
+            "prompt_movimiento": "slow motion, tumbling, macro focus",
+            "base": "imagen_generada"
+          }
+        ]
+      }
+    },
+    {
+      "id": "corte-cta",
+      "rol": "cta",
+      "t_in": 14.46,
+      "t_out": 22.1,
+      "sync_word_idx": 44,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Vuelta al barista para cerrar la invitación",
+        "fuentes": [
+          {
+            "tipo": "asset_cliente",
+            "archivo": "asset-proceso-1.mp4"
+          }
+        ]
+      },
+      "overlays": [
+        {
+          "componente": "CTA",
+          "props": {
+            "text": "Río de Janeiro 655"
+          }
+        }
+      ]
+    }
+  ],
+  "audio": {
+    "modo": "propio",
+    "voz": {
+      "texto": "El café de cadena llegó tostado hace MESES. [PAUSA=1.0] Nosotros tostamos nuestro propio grano de origen único acá, en Villa Crespo. [PAUSA=0.5] Grano trazable... tostado por nosotros... y molido al momento. [PAUSA=0.8] Por eso sabe distinto. [PAUSA=0.5] Probá un café de verdad en la barra. Río de Janeiro 655.",
+      "voz_tts": "es-AR-TomasNeural",
+      "rate": "0.9"
+    },
+    "musica": {
+      "src": "bruma-conoce-bruma/music-v5.mp3",
+      "volumen": 0.2,
+      "mood": "calido, lofi",
+      "duck": true
+    },
+    "sfx": [
+      {
+        "tipo": "impact",
+        "archivo": "bruma-conoce-bruma/impact-hq.wav",
+        "corte": "corte-hook",
+        "vol": 0.8
+      },
+      {
+        "tipo": "whoosh",
+        "archivo": "bruma-conoce-bruma/whoosh-hq.wav",
+        "corte": "corte-tueste",
+        "vol": 0.5
+      },
+      {
+        "tipo": "pop",
+        "archivo": "bruma-conoce-bruma/pop-hq.wav",
+        "corte": "corte-cta",
+        "vol": 0.6
+      }
+    ]
+  },
+  "subtitulos": {
+    "auto": true,
+    "estilo": "karaoke",
+    "maxPalabras": 4
+  },
+  "copy": {
+    "caption": "Tostamos nuestro propio grano de origen único, acá en Villa Crespo. Vení a probar la diferencia. ☕ #BrumaCafe #CafeDeEspecialidad #VillaCrespo",
+    "hashtags": [
+      "BrumaCafe",
+      "CafeDeEspecialidad",
+      "VillaCrespo"
+    ]
+  }
+}

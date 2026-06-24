@@ -1,0 +1,135 @@
+{
+  "id": "bruma-dia4-oficio",
+  "arquetipo": "tutorial",
+  "formato": "reel",
+  "aspect": "9:16",
+  "fps": 30,
+  "duracion_seg": 20.0,
+
+  "marca": {
+    "nombre": "BRUMA",
+    "colores": {
+      "primario": "#A0522D",
+      "secundario": "#4B3621",
+      "acento": "#6B8E23",
+      "fondo": "#FFFDD0",
+      "texto": "#3A2A1E",
+      "textoInverso": "#FFFDD0"
+    },
+    "fuenteTitulo": "Fraunces, Georgia, serif",
+    "fuenteTexto": "Montserrat, system-ui, sans-serif"
+  },
+
+  "escenas": [
+    {
+      "id": "hook",
+      "rol": "hook",
+      "t_in": 0,
+      "t_out": 4.0,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "FRAME 0 = miniatura: chorro fino al V60, bloom burbujeando, vapor — movimiento ya ocurriendo. Abre el loop: 'hay 4 segundos que deciden si sale rico o aguado'. Footage REAL.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-vertido.mp4", "match": { "categoria": "proceso", "palabras": ["v60", "vertido", "pour", "vapor"] } }
+        ]
+      },
+      "overlays": [{ "componente": "BrandTag", "props": { "nombre": "BRUMA", "logo": "logo-limpio.png" } }]
+    },
+    {
+      "id": "chorrito",
+      "rol": "paso",
+      "t_in": 4.0,
+      "t_out": 6.3,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "El primer chorrito de agua sobre el cafe molido. REAL. Sincroniza con 'se llama bloom: echas un primer chorrito'.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-pour2.mp4", "match": { "categoria": "proceso", "palabras": ["vertido", "chorrito", "pour"] } }
+        ]
+      },
+      "overlays": [{ "componente": "BrandTag", "props": { "nombre": "BRUMA", "logo": "logo-limpio.png" } }]
+    },
+    {
+      "id": "bloom",
+      "rol": "paso",
+      "t_in": 6.3,
+      "t_out": 12.0,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "EL momento clave en camara lenta: el lecho se hincha y burbujea mientras larga el gas. Bloom REAL a 0.5x (mas ASMR). Sincroniza con 'el cafe fresco larga un gas que amarga; por eso esperas a que deje de burbujear'.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-bloom-slow.mp4", "match": { "categoria": "proceso", "palabras": ["bloom", "burbuja", "gas"] } }
+        ]
+      },
+      "overlays": [{ "componente": "BrandTag", "props": { "nombre": "BRUMA", "logo": "logo-limpio.png" } }]
+    },
+    {
+      "id": "vertido",
+      "rol": "paso",
+      "t_in": 12.0,
+      "t_out": 15.0,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Recien cuando se calma, sigue el vertido lento en circulos y el cafe gotea parejo al server. REAL. Sincroniza con 'y recien ahi vertes el resto, lento y parejo'.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-pour2.mp4", "match": { "categoria": "proceso", "palabras": ["vertido", "circulos", "goteo"] } }
+        ]
+      },
+      "overlays": [{ "componente": "BrandTag", "props": { "nombre": "BRUMA", "logo": "logo-limpio.png" } }]
+    },
+    {
+      "id": "grano",
+      "rol": "paso",
+      "t_in": 15.0,
+      "t_out": 17.2,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Quiebre de escala: macro del cafe recien molido cayendo de la tolva (Wan2.2-5B t2v, NATIVO 9:16) — el 'mismo grano' del payoff. Si falta, cae al bloom real (draft).",
+        "fuentes": [
+          { "tipo": "video_generado", "archivo": "dia4-molienda.mp4", "prompt_movimiento": "Cinematic extreme macro food photography of freshly ground coffee. A metal grinder chute releases a steady stream of fine coffee grounds that fall and build into a cone-shaped pile, individual particles tumbling and bouncing, fine coffee dust drifting through warm golden side light, deep dark brown background, shallow depth of field, glistening oily texture. Camera slowly pushes in toward the falling grounds, smooth and steady. Photoreal, warm color grade, subtle film grain.", "negative": "low quality, blurry, distorted, deformed, morphing, warping, flickering, jitter, shaky camera, text, watermark, logo, hands, faces, oversaturated, plastic look, cartoon, cgi" },
+          { "tipo": "asset_cliente", "archivo": "dia4-bloom.mp4" }
+        ]
+      },
+      "overlays": [{ "componente": "BrandTag", "props": { "nombre": "BRUMA", "logo": "logo-limpio.png" } }]
+    },
+    {
+      "id": "cierre",
+      "rol": "contexto",
+      "t_in": 17.2,
+      "t_out": 20.0,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "LOOP: vuelve al plano del vertido humeante del hook para reiniciar sin costura, mientras cierra el payoff ('otra taza') y el CTA con la marca ('veni a Bruma y tomalo recien hecho'). Sin tarjeta de CTA dura.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-vertido.mp4", "match": { "categoria": "proceso", "palabras": ["v60", "vertido", "vapor"] } }
+        ]
+      },
+      "overlays": [
+        { "componente": "BrandTag", "props": { "nombre": "BRUMA", "logo": "logo-limpio.png" } },
+        { "componente": "LowerThird", "props": { "texto": "@bruma.cafe", "sub": "Villa Crespo · de 8 a 19" } }
+      ]
+    }
+  ],
+
+  "audio": {
+    "modo": "propio",
+    "voz": {
+      "texto": "Hay 4 segundos que deciden si tu filtrado sale rico o aguado. Se llama bloom: echás un primer chorrito y el café fresco larga un gas que amarga. Por eso esperás a que deje de burbujear, y recién ahí vertés el resto, lento y parejo. Mismo grano, otra taza. Vení a Bruma y tomalo recién hecho.",
+      "voz_tts": "es-AR-TomasNeural"
+    },
+    "musica": { "src": "music.mp3", "volumen": 0.2, "mood": "lofi cálido", "duck": true },
+    "sfx": [
+      { "tipo": "impact", "archivo": "sfx-impact.mp3", "t": 0.0, "vol": 0.5 },
+      { "tipo": "pop", "archivo": "sfx-pop.mp3", "palabra": 1, "vol": 0.5 },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "bloom" },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "grano" },
+      { "tipo": "impact", "archivo": "sfx-impact.mp3", "corte": "grano", "vol": 0.6 }
+    ]
+  },
+
+  "subtitulos": { "auto": true, "estilo": "marcador", "maxPalabras": 4 },
+  "copy": {
+    "caption": "Hay 4 segundos que deciden si tu filtrado sale rico o aguado: el bloom.\n\nApenas mojás el café molido, el grano fresco libera gas (CO₂). Si lo dejás respirar unos segundos con un primer chorrito y recién después seguís vertiendo, lento y en círculos, el agua extrae parejo. Si te lo salteás, el café sale plano y aguado.\n\nMismo grano, otra taza. Vení a Bruma y tomalo recién hecho — Villa Crespo, de 8 a 19.",
+    "hashtags": ["#cafedeespecialidad", "#villacrespo", "#v60", "#cafefiltrado", "#bloom"]
+  }
+}

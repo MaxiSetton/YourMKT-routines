@@ -1,0 +1,6 @@
+# Normalizar finales de línea: LF en el repo. Crítico para que setup.sh y los .py corran en el
+# sandbox Linux de las routines (CRLF rompe el shebang → "bad interpreter: /bin/bash^M").
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.mjs text eol=lf

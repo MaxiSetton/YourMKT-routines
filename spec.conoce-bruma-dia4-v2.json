@@ -1,0 +1,177 @@
+{
+  "id": "conoce-bruma-dia4-v2",
+  "carpeta": "bruma-conoce-bruma",
+  "arquetipo": "detras_escena",
+  "formato": "reel",
+  "aspect": "9:16",
+  "fps": 30,
+  "duracion_seg": 16,
+  "marca": {
+    "nombre": "Bruma Café",
+    "colores": {
+      "primario": "#a0522d",
+      "secundario": "#7a3c1e",
+      "acento": "#6b8e23",
+      "fondo": "#fffdd0",
+      "texto": "#2b1a12",
+      "textoInverso": "#fffdd0"
+    },
+    "fuenteTitulo": "Fraunces",
+    "fuenteTexto": "Montserrat"
+  },
+  "escenas": [
+    {
+      "id": "s1-hook",
+      "rol": "hook",
+      "t_in": 0,
+      "t_out": 3.5,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Frame 0 = miniatura: macro de granos recién tostados cayendo en cámara lenta, apetecible, con movimiento ya ocurriendo. Es el frescor que al café de cadena le falta; arranca la tensión del hook contrarian.",
+        "fuentes": [
+          {
+            "tipo": "video_generado",
+            "archivo": "bruma-conoce-bruma/granos-macro.mp4",
+            "prompt_movimiento": "macro close-up of freshly light-roasted coffee beans tumbling and cascading in slow motion, warm directional roastery light, subtle smoke and steam drifting, shallow depth of field, dynamic falling motion filling the frame, cinematic photoreal, no hands, no text",
+            "negative": "morphing, warping, distortion, flickering, jitter, shaky camera, text, watermark, logo, hands, faces, plastic look, cgi, cartoon, oversaturated"
+          }
+        ]
+      },
+      "overlays": [
+        { "componente": "BrandTag", "props": { "nombre": "Bruma", "lugar": "@bruma.cafe", "logo": "logo.png" } },
+        { "componente": "PopUp", "props": { "texto": "¿hace cuánto?", "sub": "se tostó tu café", "posicion": "center", "color": "primario", "rotacion": -3, "delay": 24 } }
+      ]
+    },
+    {
+      "id": "s2-molienda",
+      "rol": "producto",
+      "t_in": 3.5,
+      "t_out": 6.5,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Manos reales del barista en el oficio: muele el grano y la leche larga vapor. La prueba humana de que se hace acá. Footage real del cliente (ancla de confianza).",
+        "fuentes": [
+          {
+            "tipo": "asset_cliente",
+            "archivo": "bruma-conoce-bruma/asset-proceso-1.mp4",
+            "match": {
+              "categoria": "proceso",
+              "palabras": ["barista", "molino", "molienda", "grano", "vapor", "leche"]
+            }
+          }
+        ]
+      },
+      "overlays": [
+        { "componente": "BrandTag", "props": { "nombre": "Bruma", "lugar": "@bruma.cafe", "logo": "logo.png" } },
+        { "componente": "PopUp", "props": { "texto": "tueste propio", "posicion": "cl", "color": "acento", "rotacion": -3, "delay": 14 } }
+      ]
+    },
+    {
+      "id": "s3-tueste",
+      "rol": "contexto",
+      "t_in": 6.5,
+      "t_out": 8.5,
+      "scrim": "top",
+      "visual": {
+        "intencion": "El tueste propio, acá: granos girando dentro del tambor de la tostadora con luz cálida de tostadero y humo sutil. Dice 'lo tostamos acá, en Villa Crespo' sin manos ni texto. Still FLUX paneado (mood, no clip de video).",
+        "fuentes": [
+          {
+            "tipo": "kenburns",
+            "archivo": "bruma-conoce-bruma/tueste-tambor.jpg"
+          },
+          {
+            "tipo": "imagen_generada",
+            "archivo": "bruma-conoce-bruma/tueste-tambor.jpg",
+            "prompt": "macro photograph of light-roast coffee beans turning inside a warm copper coffee roaster drum, glowing roastery light, soft smoke and steam, shallow depth of field, editorial photography, low saturation, warm earthy tones, no hands, no people, no text, clean empty space in the upper third, vertical 9:16 composition"
+          }
+        ]
+      },
+      "overlays": [
+        { "componente": "BrandTag", "props": { "nombre": "Bruma", "lugar": "@bruma.cafe", "logo": "logo.png" } }
+      ]
+    },
+    {
+      "id": "s4-molido",
+      "rol": "producto",
+      "t_in": 8.5,
+      "t_out": 11.5,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Molido al momento: macro de café recién molido cayendo en un montículo, textura fina de molienda, luz cálida lateral. Prueba sensorial de 'molido al momento'; sin manos ni producto terminado (eso es el Día 5). Still FLUX paneado.",
+        "fuentes": [
+          {
+            "tipo": "kenburns",
+            "archivo": "bruma-conoce-bruma/molido-macro.jpg"
+          },
+          {
+            "tipo": "imagen_generada",
+            "archivo": "bruma-conoce-bruma/molido-macro.jpg",
+            "prompt": "extreme macro photograph of freshly ground coffee powder falling into a soft mound, fine espresso grind texture, warm side light, gentle motion blur on the falling grounds, editorial food photography, shallow depth of field, low saturation, warm earthy tones, no hands, no people, no text, vertical 9:16 composition"
+          }
+        ]
+      },
+      "overlays": [
+        { "componente": "BrandTag", "props": { "nombre": "Bruma", "lugar": "@bruma.cafe", "logo": "logo.png" } },
+        { "componente": "PopUp", "props": { "texto": "origen único", "sub": "trazable", "posicion": "cr", "color": "acento", "rotacion": -3, "delay": 18 } }
+      ]
+    },
+    {
+      "id": "s5-cta",
+      "rol": "cta",
+      "t_in": 11.5,
+      "t_out": 16,
+      "scrim": "full",
+      "visual": {
+        "intencion": "Cierre que reinicia el loop: vuelve al macro de granos cayendo (rima con el frame 0 para que el reel reinicie sin costura). Sobre él va la tarjeta de CTA con la dirección. Reutilización deliberada del clip del hook SOLO para el loop.",
+        "fuentes": [
+          {
+            "tipo": "video_generado",
+            "archivo": "bruma-conoce-bruma/granos-macro.mp4",
+            "prompt_movimiento": "macro close-up of freshly light-roasted coffee beans tumbling and cascading in slow motion, warm directional roastery light, subtle smoke and steam drifting, shallow depth of field, dynamic falling motion filling the frame, cinematic photoreal, no hands, no text",
+            "negative": "morphing, warping, distortion, flickering, jitter, shaky camera, text, watermark, logo, hands, faces, plastic look, cgi, cartoon, oversaturated"
+          }
+        ]
+      },
+      "overlays": [
+        { "componente": "BrandTag", "props": { "nombre": "Bruma", "lugar": "@bruma.cafe", "logo": "logo.png" } },
+        { "componente": "CTA", "props": { "accento": "pasá y probá", "titulo": "Río de Janeiro 655", "sub": "Villa Crespo · de 8 a 19" } }
+      ]
+    }
+  ],
+  "audio": {
+    "modo": "propio",
+    "voz": {
+      "texto": "El café de cadena se tostó hace meses.\nEl nuestro lo tostamos ACÁ… en Villa Crespo.\nOrigen ÚNICO, trazable, molido al momento.\nVení a probar la diferencia. Río de Janeiro 655.",
+      "voz_tts": "es-AR-TomasNeural",
+      "rate": "0.9"
+    },
+    "musica": {
+      "src": "bruma-conoce-bruma/music-oficio.mp3",
+      "volumen": 0.18,
+      "mood": "lo-fi acústico cálido y orgánico, con groove sutil, ~85-95 BPM, NADA sleepy. Mínima bajo la voz, respira en los huecos. Query libre (Freesound CC0/Uppbeat): 'warm acoustic lo-fi coffee chill loop'.",
+      "duck": true
+    },
+    "sfx": [
+      { "tipo": "impact", "archivo": "bruma-conoce-bruma/sfx-impact.mp3", "corte": "s1-hook", "vol": 0.9 },
+      { "tipo": "pop", "archivo": "bruma-conoce-bruma/sfx-pop.mp3", "t": 0.8, "vol": 0.7 },
+      { "tipo": "ambience", "archivo": "bruma-conoce-bruma/asmr-molienda.mp3", "corte": "s2-molienda", "vol": 0.85 },
+      { "tipo": "pop", "archivo": "bruma-conoce-bruma/sfx-pop.mp3", "t": 4.0, "vol": 0.7 },
+      { "tipo": "ambience", "archivo": "bruma-conoce-bruma/asmr-tueste.mp3", "corte": "s3-tueste", "vol": 0.7 },
+      { "tipo": "riser", "archivo": "bruma-conoce-bruma/sfx-riser.mp3", "t": 7.9, "vol": 0.6 },
+      { "tipo": "impact", "archivo": "bruma-conoce-bruma/sfx-impact.mp3", "corte": "s4-molido", "vol": 0.85 },
+      { "tipo": "ambience", "archivo": "bruma-conoce-bruma/asmr-molido.mp3", "corte": "s4-molido", "vol": 0.7 },
+      { "tipo": "pop", "archivo": "bruma-conoce-bruma/sfx-pop.mp3", "t": 9.1, "vol": 0.7 },
+      { "tipo": "impact", "archivo": "bruma-conoce-bruma/sfx-impact.mp3", "corte": "s5-cta", "vol": 0.65 },
+      { "tipo": "ambience", "archivo": "bruma-conoce-bruma/asmr-granos.mp3", "corte": "s5-cta", "vol": 0.5 }
+    ]
+  },
+  "subtitulos": {
+    "auto": true,
+    "estilo": "karaoke",
+    "maxPalabras": 4
+  },
+  "copy": {
+    "caption": "Tu café de todos los días capaz viajó tostado dos o tres meses antes de llegar a tu taza. El nuestro lo tostamos acá, en Villa Crespo: grano de origen único, trazable, y molido al momento en la barra. Por eso sabe distinto. Pasá y probá la diferencia. Río de Janeiro 655, de 8 a 19. ☕",
+    "hashtags": ["#villacrespo", "#cafedeespecialidad", "#villacrespocafe", "#brumacafe", "#cafeporteño", "#tuestepropio", "#cafedeorigen"]
+  }
+}

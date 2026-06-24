@@ -1,0 +1,48 @@
+{
+  "name": "yourmkt-renderer",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Renderizador determinista spec.json -> reel MP4 (Remotion + edge-tts). Paquete aislado de la app Next.js.",
+  "type": "module",
+  "scripts": {
+    "seed:calendar": "node scripts/seed-calendar.mjs",
+    "fetch:campaign": "node scripts/fetch-campaign.mjs",
+    "fetch:piece": "node scripts/fetch-piece.mjs",
+    "fetch:assets": "node scripts/fetch-assets.mjs",
+    "fetch:audio": "node scripts/fetch-audio.mjs",
+    "gen:hf": "node scripts/generate-hf.mjs",
+    "gen:modal": "node scripts/generate.mjs",
+    "normalize": "node scripts/normalize.mjs",
+    "tts": "node scripts/tts.mjs",
+    "retime": "node scripts/retime.mjs",
+    "render": "node scripts/render.mjs",
+    "render:carrusel": "node scripts/render-carrusel.mjs",
+    "validate:spec": "node scripts/validate-spec.mjs",
+    "align:music": "node scripts/align-music.mjs",
+    "mix": "node scripts/mix-audio.mjs",
+    "post": "node scripts/post.mjs",
+    "build": "npm run tts && npm run render",
+    "studio": "remotion studio",
+    "publish:reel": "node scripts/publish.mjs",
+    "publish:imagen": "node scripts/publish-imagen.mjs",
+    "publish:carrusel": "node scripts/publish-carrusel.mjs"
+  },
+  "dependencies": {
+    "ajv": "^6.15.0",
+    "@andresaya/edge-tts": "^1.8.0",
+    "@google-cloud/text-to-speech": "^6.4.1",
+    "@gradio/client": "^2.3.0",
+    "@huggingface/inference": "^4.13.19",
+    "@remotion/cli": "4.0.380",
+    "@remotion/google-fonts": "^4.0.477",
+    "@remotion/renderer": "4.0.380",
+    "dotenv": "^17.4.2",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.380"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.0",
+    "typescript": "5.7.3"
+  }
+}

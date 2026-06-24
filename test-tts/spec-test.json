@@ -1,0 +1,12 @@
+{
+  "audio": {
+    "voz": {
+      "texto": "¿Qué tiene este grano... que no podíamos esperar para tostarlo? — Cambiamos el origen del mes. Es un Etiopía Yirgacheffe... recién tostado, ¡y nos tiene un poco obsesionados! — Esta semana lo tenés en filtrado, en la barra. Pasá a probarlo.",
+      "voz_tts": "es-AR-TomasNeural",
+      "rate": "-5%"
+    }
+  },
+  "subtitulos": {
+    "maxPalabras": 4
+  }
+}

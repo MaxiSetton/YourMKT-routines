@@ -1,0 +1,73 @@
+{
+  "piece_id": "conoce-bruma-dia1",
+  "dia": 1,
+  "fecha": "2026-06-23",
+  "negocio": {
+    "nombre": "Bruma Café",
+    "instagram": "@bruma.cafe",
+    "sitio_web": "https://brumacafe.com.ar",
+    "tono_marca": "cercano",
+    "tono_detalle": "Hablamos de vos. Cálidos, un poco nerd con el café pero sin sobrar a nadie — explicamos sin bajar línea. Humor suave, nada de signos de exclamación de más ni mayúsculas gritando. Argentino neutro (\"dale\", \"te va a encantar\", \"pasá\").",
+    "evitar": "Emojis en exceso, lenguaje corporativo (\"disfrutá de la mejor experiencia\"), promesas vacías, hablar de \"el mejor café del mundo\", fotos con flash o filtros saturados, hashtags genéricos tipo #coffeelover #instagood. No usar inglés innecesario.",
+    "estetica_visual": "Luz natural, tonos tierra y crema, madera clara, mucho vapor y texturas (latte art, miga de medialuna, granos). Fotos con poca saturación, cálidas, estilo editorial pero real (nada de stock). Tipografía serif para títulos.",
+    "propuesta_valor": "Café trazable de origen, tostado propio y atención que te explica qué estás tomando — sin pretensión. El mejor flat white del barrio y medialunas que se terminan a las 11am.",
+    "color_primario": "#a0522d",
+    "color_acento": "#6b8e23",
+    "color_fondo": "#fffdd0",
+    "vibe_tipografico": "moderna",
+    "voz_preferencia": "es-AR-TomasNeural",
+    "logo_url": "1e04265d-55c5-4fbc-bdd8-64007d57c987/brand/logo-1781551849259.png"
+  },
+  "campania": {
+    "id": "fd05a161-e91f-4698-a4eb-b9b98eeb037e",
+    "nombre": "Conocé Bruma — el café del barrio",
+    "brief": "Campaña de invierno para instalar a Bruma como \"el café del barrio\". No estamos vendiendo una promo, estamos invitando a conocer el lugar. Tono cálido y nerd-del-café sin sobrar a nadie, argentino neutro. Evitar lenguaje corporativo, \"la mejor experiencia\", emojis de más y hashtags genéricos.",
+    "objetivo": "Dar a conocer el local entre gente del barrio que todavía no lo pisó y convertirlo en su café de cabecera. Sumar visitas nuevas y primeras veces.",
+    "que_promociona": "El lugar en sí: Bruma como café de especialidad para venir a tomar algo bien hecho, trabajar con la notebook entre semana o juntarse los findes. No es un descuento ni un producto puntual.",
+    "fecha_inicio": "2026-06-23",
+    "duracion_dias": 7,
+    "nivel_conciencia": "consciente_solucion",
+    "audiencia_objetivo": "mixta",
+    "elementos_especificos": "Mostrar el local de verdad.\nQue se entienda que tostamos nuestro propio grano de origen único (eso nos diferencia del café de cadena).\nDejar claro que entre semana podés venir a trabajar con la notebook sin que te apuren.\nMencionar Villa Crespo y la dirección (Río de Janeiro 655) y el horario 8 a 19h.\nDestacar el flat white y las medialunas.\nDecir que hay opciones sin TACC y veganas.\nÁngulo de invierno: el café como refugio del frío. Sin sonar a folleto"
+  },
+  "post": {
+    "id": "4e547962-5fa0-42ee-bf52-100d18c4e225",
+    "fecha": "2026-06-23",
+    "hora": "08:30:00",
+    "formato": "reel",
+    "estado": "borrador",
+    "version": 1,
+    "rol": "gancho",
+    "pilar": "El refugio / el lugar",
+    "angulo": "Reel sensorial (~12s) del café como refugio del frío. Contraste frío afuera / calor adentro. Primer frame: vapor llenando el cuadro. NO se muestra todavía el local real (eso es el Día 2): puro feeling. Loop al vapor.",
+    "hook": "Afuera hace 6 grados. Acá adentro huele a café recién tostado.",
+    "hook_formula": "antes_despues (frío afuera / calor adentro)",
+    "cta": "Guardalo para tu próxima escapada del frío.",
+    "texto": "Café de especialidad en Villa Crespo. Afuera, el frío. Acá adentro, una taza que humea y un lugar para quedarte un rato largo. Bruma, Río de Janeiro 655. Guardalo para cuando necesites entrar en calor.",
+    "no_repetir": "No mostrar el interior del local (eso abre el Día 2) ni hablar del tueste (Día 4). Solo el feeling sensorial.",
+    "media_url": null,
+    "media_tipo": null
+  },
+  "assets": [
+    {
+      "id": "006af9c5-81cc-443f-84f8-80c47fb12d79",
+      "tipo": "video",
+      "categoria": "otro",
+      "origen": "a_generar",
+      "descripcion": "Sensorial de refugio: vapor de una taza de café caliente subiendo en cámara lenta, luz cálida lateral, ambiente invernal. Sin caras, texto ni logos. Para el gancho del Día 1 (no depende del cliente).",
+      "prompt": "close-up of steam rising from a hot coffee cup, warm side light, cozy winter atmosphere, shallow depth of field, no faces, no text, no logos, photoreal editorial, low saturation, warm earthy tones, vertical 9:16",
+      "url": null,
+      "nombre_archivo": null
+    },
+    {
+      "id": "d9d5e877-36f6-4b53-bcfe-91d81c6c2ee7",
+      "tipo": "video",
+      "categoria": "otro",
+      "origen": "a_generar",
+      "descripcion": "Contraste frío/calor: ventana con vaho y calle fría afuera, interior cálido y dorado adentro. Sensorial, sin caras ni texto. Apoyo del Día 1.",
+      "prompt": "foggy café window seen from inside, cold blue blurred street outside, warm golden interior light, condensation on the glass, no faces, no text, photoreal moody winter, low saturation, vertical 9:16",
+      "url": null,
+      "nombre_archivo": null
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "bruma-dia3-educacion",
+  "formato": "carrusel",
+  "aspect": "4:5",
+  "marca": {
+    "nombre": "BRUMA",
+    "colores": {
+      "primario": "#A0522D",
+      "secundario": "#4B3621",
+      "acento": "#6B8E23",
+      "fondo": "#FFFDD0",
+      "texto": "#3A2A1E",
+      "textoInverso": "#FFFDD0"
+    },
+    "fuenteTitulo": "Fraunces, Georgia, serif",
+    "fuenteTexto": "Montserrat, system-ui, sans-serif"
+  },
+  "slides": [
+    {
+      "variante": "portada",
+      "kicker": "Guía rápida",
+      "titulo": "¿Lavado?\n¿Yirgacheffe?",
+      "cuerpo": "Dos palabras que ves en el café del mes. Qué significan y qué cambian en tu taza — sin ponernos densos.",
+      "swipe": "deslizá →"
+    },
+    {
+      "variante": "concepto",
+      "kicker": "La región",
+      "titulo": "Yirgacheffe",
+      "cuerpo": "Una región del sur de Etiopía, conocida por cafés muy aromáticos y delicados. De ahí viene el grano de este mes."
+    },
+    {
+      "variante": "concepto",
+      "kicker": "El proceso",
+      "titulo": "“Lavado”",
+      "cuerpo": "Le sacan la pulpa al grano antes de secarlo. Ese paso define buena parte de cómo va a saber.",
+      "foto": "cliente-otro-4.jpg"
+    },
+    {
+      "variante": "concepto",
+      "kicker": "En la taza",
+      "titulo": "Limpia y nítida",
+      "cuerpo": "Las notas florales y cítricas se sienten claras, en vez de quedar tapadas por el dulzor de la fruta (como en un natural). Por eso este café sabe como sabe."
+    },
+    {
+      "variante": "cierre",
+      "titulo": "¿Dudas?\nPreguntale al barista.",
+      "cuerpo": "Para eso estamos. Pasá a probarlo.",
+      "pie": "@bruma.cafe · de 8 a 19"
+    }
+  ],
+  "copy": {
+    "caption": "'Lavado', 'Yirgacheffe'... ¿qué cambia para vos en la taza? Te lo explicamos cortito, sin ponernos densos. →\n\nYirgacheffe es una región del sur de Etiopía, conocida por cafés muy aromáticos y delicados.\n\n'Lavado' es el proceso: le sacan la pulpa al grano antes de secarlo. ¿Resultado? Una taza más limpia y nítida, donde las notas florales y cítricas se sienten claras, en vez de quedar tapadas por el dulzor de la fruta (como pasa en un natural).\n\nPor eso este café sabe como sabe. Cualquier duda, preguntale al barista — para eso estamos.",
+    "hashtags": ["#cafedeespecialidad", "#villacrespo", "#etiopiayirgacheffe", "#cafelavado", "#sabermas"]
+  }
+}

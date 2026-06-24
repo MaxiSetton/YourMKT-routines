@@ -1,0 +1,63 @@
+{
+  "piece_id": "conoce-bruma-dia5",
+  "dia": 5,
+  "fecha": "2026-06-27",
+  "negocio": {
+    "nombre": "Bruma Café",
+    "instagram": "@bruma.cafe",
+    "sitio_web": "https://brumacafe.com.ar",
+    "tono_marca": "cercano",
+    "tono_detalle": "Hablamos de vos. Cálidos, un poco nerd con el café pero sin sobrar a nadie — explicamos sin bajar línea. Humor suave, nada de signos de exclamación de más ni mayúsculas gritando. Argentino neutro (\"dale\", \"te va a encantar\", \"pasá\").",
+    "evitar": "Emojis en exceso, lenguaje corporativo (\"disfrutá de la mejor experiencia\"), promesas vacías, hablar de \"el mejor café del mundo\", fotos con flash o filtros saturados, hashtags genéricos tipo #coffeelover #instagood. No usar inglés innecesario.",
+    "estetica_visual": "Luz natural, tonos tierra y crema, madera clara, mucho vapor y texturas (latte art, miga de medialuna, granos). Fotos con poca saturación, cálidas, estilo editorial pero real (nada de stock). Tipografía serif para títulos.",
+    "propuesta_valor": "Café trazable de origen, tostado propio y atención que te explica qué estás tomando — sin pretensión. El mejor flat white del barrio y medialunas que se terminan a las 11am.",
+    "color_primario": "#a0522d",
+    "color_acento": "#6b8e23",
+    "color_fondo": "#fffdd0",
+    "vibe_tipografico": "moderna",
+    "voz_preferencia": "es-AR-TomasNeural",
+    "logo_url": "1e04265d-55c5-4fbc-bdd8-64007d57c987/brand/logo-1781551849259.png"
+  },
+  "campania": {
+    "id": "fd05a161-e91f-4698-a4eb-b9b98eeb037e",
+    "nombre": "Conocé Bruma — el café del barrio",
+    "brief": "Campaña de invierno para instalar a Bruma como \"el café del barrio\". No estamos vendiendo una promo, estamos invitando a conocer el lugar. Tono cálido y nerd-del-café sin sobrar a nadie, argentino neutro. Evitar lenguaje corporativo, \"la mejor experiencia\", emojis de más y hashtags genéricos.",
+    "objetivo": "Dar a conocer el local entre gente del barrio que todavía no lo pisó y convertirlo en su café de cabecera. Sumar visitas nuevas y primeras veces.",
+    "que_promociona": "El lugar en sí: Bruma como café de especialidad para venir a tomar algo bien hecho, trabajar con la notebook entre semana o juntarse los findes. No es un descuento ni un producto puntual.",
+    "fecha_inicio": "2026-06-23",
+    "duracion_dias": 7,
+    "nivel_conciencia": "consciente_solucion",
+    "audiencia_objetivo": "mixta",
+    "elementos_especificos": "Mostrar el local de verdad.\nQue se entienda que tostamos nuestro propio grano de origen único (eso nos diferencia del café de cadena).\nDejar claro que entre semana podés venir a trabajar con la notebook sin que te apuren.\nMencionar Villa Crespo y la dirección (Río de Janeiro 655) y el horario 8 a 19h.\nDestacar el flat white y las medialunas.\nDecir que hay opciones sin TACC y veganas.\nÁngulo de invierno: el café como refugio del frío. Sin sonar a folleto"
+  },
+  "post": {
+    "id": "c59622e9-8642-4e77-b2ae-064d85d1ecf3",
+    "fecha": "2026-06-27",
+    "hora": "09:30:00",
+    "formato": "feed",
+    "estado": "borrador",
+    "version": 1,
+    "rol": "deseo",
+    "pilar": "La carta",
+    "angulo": "Carrusel de la carta (6–8 slides): flat white con latte art, medialunas caseras (FOMO: se terminan a las 11), y que hay opciones sin TACC y veganas (inclusión, baja objeción). Producto real, no IA.",
+    "hook": "Las medialunas se terminan a las 11. No es marketing: las hacemos cada mañana.",
+    "hook_formula": "escasez / aviso (FOMO real)",
+    "cta": "Pedí tu flat white antes de las 11: Río de Janeiro 655.",
+    "texto": "El flat white y las medialunas de Villa Crespo que se terminan temprano. Pastelería casera todos los días, flat white con el grano que tostamos nosotros, y opciones sin TACC y veganas para que no se quede nadie afuera. Vení antes de las 11 por las medialunas.",
+    "no_repetir": "Acá manda la carta/los productos. No repetir el oficio del tueste (Día 4) ni la gente/comunidad (Día 6).",
+    "media_url": null,
+    "media_tipo": null
+  },
+  "assets": [
+    {
+      "id": "35e161d8-9030-4528-aa61-d4b595e27bc8",
+      "tipo": "imagen",
+      "categoria": "producto",
+      "origen": "a_pedir",
+      "descripcion": "[A pedir al cliente] Foto en buena luz de la carta: un flat white con latte art recién hecho y medialunas en el plato; sumá una opción sin TACC y una vegana en cuadro. Etiqueta/producto real (la IA no inventa productos). Para el carrusel de la carta (Día 5).",
+      "prompt": null,
+      "url": null,
+      "nombre_archivo": null
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Deps de Python del pipeline (Routine 3): TTS OmniVoice + alineación forzada faster-whisper.
+# torch se instala APARTE en setup.sh (wheel CPU, mucho más liviano que el default con CUDA).
+# Versiones de referencia del entorno local de dev (Anaconda):
+#   omnivoice 0.1.5 · torch 2.12.1 · faster-whisper 1.2.1 · soundfile 0.14.0 · imageio-ffmpeg 0.6.0 · numpy 2.3.5
+omnivoice==0.1.5
+faster-whisper==1.2.1
+soundfile
+imageio-ffmpeg
+numpy

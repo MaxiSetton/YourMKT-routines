@@ -1,0 +1,10 @@
+node_modules/
+out/
+.tools/
+__pycache__/
+# public/ es el pool de ENTRADA: binarios pesados que se bajan/generan fresco en cada corrida.
+public/
+!public/.gitkeep
+test-tts/public/
+.env
+*.log

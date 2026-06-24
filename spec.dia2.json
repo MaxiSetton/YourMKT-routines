@@ -1,0 +1,88 @@
+{
+  "id": "bruma-dia2-deseo",
+  "arquetipo": "promo",
+  "formato": "reel",
+  "aspect": "9:16",
+  "fps": 30,
+  "duracion_seg": 16,
+
+  "marca": {
+    "nombre": "BRUMA",
+    "colores": {
+      "primario": "#A0522D",
+      "secundario": "#4B3621",
+      "acento": "#6B8E23",
+      "fondo": "#FFFDD0",
+      "texto": "#3A2A1E",
+      "textoInverso": "#FFFDD0"
+    },
+    "fuenteTitulo": "Fraunces, Georgia, serif",
+    "fuenteTexto": "Montserrat, system-ui, sans-serif"
+  },
+
+  "escenas": [
+    {
+      "id": "hook",
+      "rol": "hook",
+      "t_in": 0,
+      "t_out": 4.5,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "FRAME 0 con movimiento ya ocurriendo: dolly-in al V60 mientras el chorro de cafe cae y salpica al vaso, el vapor sube y se enrosca. La promesa (un cafe que hace agua la boca) en accion desde el primer frame.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia2-v60-clip.mp4", "match": { "categoria": "producto", "palabras": ["v60", "filtrado", "goteo", "chorro"] } },
+          { "tipo": "video_generado", "archivo": "dia2-v60-pour.mp4", "base": "asset_cliente", "prompt_movimiento": "A steady thin stream of hot water flows down from the gooseneck kettle onto the coffee bed inside the V60 dripper, the grounds bloom and swell as they saturate and darken, fine steam rises and curls slowly upward through the warm backlight, dark coffee seeps through the filter and drips in a continuous trickle into the glass server below as the liquid level gently rises; the camera pushes in slowly and settles on the blooming coffee bed, shallow depth of field, soft warm natural light, calm and continuous cinematic motion" },
+          { "tipo": "kenburns", "archivo": "cliente-producto-2.jpg" }
+        ]
+      },
+      "overlays": [{ "componente": "BrandTag", "props": { "nombre": "BRUMA", "logo": "logo-limpio.png" } }]
+    },
+    {
+      "id": "notas",
+      "rol": "producto",
+      "t_in": 4.5,
+      "t_out": 10.0,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Match cut a macro de los granos: orbit + rack focus que viaja del frente al fondo, granos rodando, la luz barriendo. De aca salen las notas — la voz nombra jazmin, bergamota y durazno mientras se ve el grano.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia2-granos-clip.mp4", "match": { "categoria": "otro", "palabras": ["grano", "tueste", "macro"] } },
+          { "tipo": "video_generado", "archivo": "dia2-granos.mp4", "base": "asset_cliente", "prompt_movimiento": "The roasted coffee beans glisten as warm light slowly sweeps across the pile, a few beans on top settle and shift almost imperceptibly, the focus drifts gently from the beans in the foreground to those behind, revealing their oily sheen and deep texture; the camera drifts in a slow smooth push toward the beans and settles, shallow depth of field, warm golden light, calm and tactile cinematic motion" },
+          { "tipo": "kenburns", "archivo": "cliente-otro-4.jpg" }
+        ]
+      },
+      "overlays": []
+    },
+    {
+      "id": "loop",
+      "rol": "contexto",
+      "t_in": 10.0,
+      "t_out": 16,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Vuelve al V60 en movimiento (mismo plano del hook) para cerrar e invitar: se siente mejor en filtrado, pasa a probarlo. El ultimo frame engancha con el primero y reinicia el reel (loop).",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia2-v60-clip.mp4", "match": { "categoria": "producto", "palabras": ["v60", "filtrado", "goteo", "chorro"] } },
+          { "tipo": "video_generado", "archivo": "dia2-v60-pour.mp4", "base": "asset_cliente", "prompt_movimiento": "mismo clip que el hook (dia2-v60-pour.mp4): el ultimo frame engancha con el primero" },
+          { "tipo": "kenburns", "archivo": "cliente-producto-2.jpg" }
+        ]
+      },
+      "overlays": [{ "componente": "LowerThird", "props": { "texto": "@bruma.cafe", "sub": "Villa Crespo · filtrado en V60" } }]
+    }
+  ],
+
+  "audio": {
+    "modo": "propio",
+    "voz": {
+      "texto": "¿Un café que sabe a jazmín, bergamota y durazno? Sin saborizantes, sin agregarle nada: todo eso ya está en el grano. Se nota más en filtrado. Pasá por Bruma, en Villa Crespo, y pedilo en V60.",
+      "voz_tts": "es-AR-TomasNeural"
+    },
+    "musica": { "src": "music.mp3", "volumen": 0.28 }
+  },
+
+  "subtitulos": { "auto": true, "estilo": "marcador", "maxPalabras": 4 },
+  "copy": {
+    "caption": "¿Un café que sabe a jazmín, bergamota y durazno? Sin saborizantes, sin agregarle nada. Todo eso ya está en el grano: es el Etiopía Yirgacheffe del mes. La taza arranca floral, en el medio aparece algo cítrico tipo bergamota y cierra dulce, a durazno. Se siente mejor en filtrado, que es donde el grano tiene lugar para mostrarse. Pasá y pedilo en V60. No hace falta ser experto para notarlo. Villa Crespo, de 8 a 19.",
+    "hashtags": ["#cafedeespecialidad", "#villacrespo", "#etiopiayirgacheffe", "#notasdecata", "#cafefiltrado"]
+  }
+}

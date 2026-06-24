@@ -1,0 +1,139 @@
+{
+  "id": "conoce-bruma-dia4-v3",
+  "carpeta": "bruma-conoce-bruma",
+  "arquetipo": "educativo",
+  "formato": "reel",
+  "aspect": "9:16",
+  "fps": 30,
+  "duracion_seg": 15,
+  "marca": {
+    "nombre": "Bruma",
+    "colores": {
+      "primario": "#a0522d",
+      "secundario": "#d2b48c",
+      "acento": "#6b8e23",
+      "fondo": "#fffdd0",
+      "texto": "#2b1a12",
+      "textoInverso": "#fffdd0"
+    },
+    "fuenteTitulo": "Fraunces",
+    "fuenteTexto": "Montserrat"
+  },
+  "escenas": [
+    {
+      "id": "escena-hook",
+      "rol": "hook",
+      "t_in": 0,
+      "t_out": 4.5,
+      "scrim": "none",
+      "visual": {
+        "intencion": "Captar la atencion con el latte art en proceso, cortando la creencia del cafe generico",
+        "fuentes": [
+          {
+            "tipo": "asset_cliente",
+            "archivo": "asset-proceso-1.mp4"
+          }
+        ]
+      },
+      "overlays": [
+        {
+          "componente": "BrandTag",
+          "props": {}
+        }
+      ]
+    },
+    {
+      "id": "escena-diferenciador",
+      "rol": "producto",
+      "t_in": 4.5,
+      "t_out": 9.5,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Movimiento dinamico de granos de cafe siendo tostados",
+        "fuentes": [
+          {
+            "tipo": "video_generado",
+            "archivo": "gen-granos-tueste-v3.mp4",
+            "prompt": "macro close-up of light-roasted coffee beans tumbling, warm roastery light, subtle smoke and steam, shallow depth of field, no hands, no text, photoreal editorial, warm tones, vertical 9:16",
+            "prompt_movimiento": "dynamic tumbling and falling of coffee beans, slow motion, cinematic pan",
+            "negative": "morphing, warping, distortion, flickering, jitter, text, watermark"
+          }
+        ]
+      },
+      "overlays": []
+    },
+    {
+      "id": "escena-resolucion",
+      "rol": "cta",
+      "t_in": 9.5,
+      "t_out": 15.0,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Vuelta al barista terminando el flat white y dejando la taza",
+        "fuentes": [
+          {
+            "tipo": "asset_cliente",
+            "archivo": "asset-proceso-1.mp4"
+          }
+        ]
+      },
+      "overlays": [
+        {
+          "componente": "CTA",
+          "props": {
+            "texto": "Río de Janeiro 655"
+          }
+        }
+      ]
+    }
+  ],
+  "audio": {
+    "modo": "propio",
+    "voz": {
+      "texto": "El café de cadena llegó tostado hace MESES… Nuestro grano entra crudo… y lo tostamos ACÁ en Villa Crespo… Por eso este flat white tiene OTRO gusto… Pasá a probar la diferencia por Río de Janeiro 655.",
+      "voz_tts": "es-AR-TomasNeural",
+      "rate": "0.9"
+    },
+    "musica": {
+      "src": "music-cafe.mp3",
+      "volumen": 0.2,
+      "mood": "calido, lofi",
+      "duck": true
+    },
+    "sfx": [
+      {
+        "tipo": "impact",
+        "archivo": "impact-deep.wav",
+        "t": 0.5,
+        "vol": 1.0
+      },
+      {
+        "tipo": "whoosh",
+        "archivo": "whoosh.wav",
+        "corte": "escena-diferenciador",
+        "vol": 0.8
+      },
+      {
+        "tipo": "ambience",
+        "archivo": "coffee-beans.wav",
+        "corte": "escena-diferenciador",
+        "vol": 0.5
+      },
+      {
+        "tipo": "pop",
+        "archivo": "pop.wav",
+        "corte": "escena-resolucion",
+        "vol": 0.9
+      }
+    ]
+  },
+  "subtitulos": {
+    "auto": true,
+    "estilo": "karaoke",
+    "maxPalabras": 5
+  },
+  "copy": {
+    "caption": "Tostamos nuestro propio grano de origen único, acá en Villa Crespo. No es café de cadena que viajó meses: es grano trazable, tostado por nosotros y molido al momento. Por eso sabe distinto. Vení a probar la diferencia. Río de Janeiro 655.",
+    "hashtags": ["#villacrespo", "#cafedeespecialidad", "#villacrespocafe", "#brumacafe", "#cafeporteño"]
+  }
+}

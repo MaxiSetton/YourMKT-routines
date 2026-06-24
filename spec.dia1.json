@@ -1,0 +1,129 @@
+{
+  "id": "bruma-dia1-lanzamiento",
+  "arquetipo": "novedad",
+  "formato": "reel",
+  "aspect": "9:16",
+  "fps": 30,
+  "duracion_seg": 16.7,
+
+  "marca": {
+    "nombre": "BRUMA",
+    "colores": {
+      "primario": "#A0522D",
+      "secundario": "#4B3621",
+      "acento": "#6B8E23",
+      "fondo": "#FFFDD0",
+      "texto": "#3A2A1E",
+      "textoInverso": "#FFFDD0"
+    },
+    "fuenteTitulo": "Fraunces, Georgia, serif",
+    "fuenteTexto": "Montserrat, system-ui, sans-serif"
+  },
+
+  "escenas": [
+    {
+      "id": "hook",
+      "rol": "hook",
+      "t_in": 0,
+      "t_out": 3.5,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "FRAME 0 = vertido humeante real, intriga. La voz tira la pregunta-gancho: '¿qué tiene este grano que no podíamos esperar para tostarlo?'.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-vertido.mp4", "match": { "categoria": "proceso", "palabras": ["v60", "vertido", "vapor"] } }
+        ]
+      },
+      "overlays": [
+        { "componente": "BrandTag", "props": { "nombre": "BRUMA", "logo": "logo-limpio.png" } }
+      ]
+    },
+    {
+      "id": "grano",
+      "rol": "producto",
+      "t_in": 3.5,
+      "t_out": 6.2,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Macro HIPERREAL de los granos recién tostados (generado FLUX + i2v: SIN etiqueta, conceptual = IA válida). Brillo aceitoso, luz que barre. 'Cambiamos el origen del mes'.",
+        "fuentes": [
+          { "tipo": "video_generado", "archivo": "dia1-grano.mp4", "prompt_movimiento": "Warm directional light slowly sweeps across the glossy freshly roasted coffee beans, a few beans settle and shift, fine chaff dust drifts through the light, slow dolly-in, rich tactile cinematic motion", "negative": "morphing, warping, distortion, flickering, jitter, text, watermark, label, packaging, hands, faces, deformed" },
+          { "tipo": "imagen_generada", "archivo": "dia1-grano.jpg", "prompt": "Extreme hyperreal macro of glossy freshly roasted single-origin coffee beans piled together, rich oily sheen, warm directional light sweeping across them revealing deep brown and amber tones, fine chaff dust in the air, dark moody background, shallow depth of field, clean professional food photography, photorealistic, vertical 9:16 composition, no text, no packaging" }
+        ]
+      },
+      "overlays": []
+    },
+    {
+      "id": "reveal",
+      "rol": "producto",
+      "t_in": 6.2,
+      "t_out": 10.9,
+      "scrim": "full",
+      "visual": {
+        "intencion": "EL REVEAL: el nombre del origen en grande sobre el café (sin depender de la etiqueta de la bolsa, que va en hi-res en produccion). Bloom real en cámara lenta de fondo. 'Es un Etiopía Yirgacheffe, recién tostado'.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-bloom-slow.mp4", "match": { "categoria": "proceso", "palabras": ["bloom", "vertido"] } }
+        ]
+      },
+      "overlays": [
+        { "componente": "TituloIntro", "props": { "kicker": "ORIGEN DE JULIO", "titulo": "Etiopía Yirgacheffe" } }
+      ]
+    },
+    {
+      "id": "filtrado",
+      "rol": "contexto",
+      "t_in": 10.9,
+      "t_out": 13.9,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "El vertido/filtrado real: ya disponible. 'Esta semana lo tenés en filtrado, en la barra'.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-pour2.mp4", "match": { "categoria": "proceso", "palabras": ["vertido", "circulos", "goteo"] } }
+        ]
+      },
+      "overlays": [
+        { "componente": "PopUp", "props": { "texto": "esta semana", "sub": "en V60 y Aeropress", "posicion": "tr", "color": "acento", "rotacion": -3, "delay": 10 } }
+      ]
+    },
+    {
+      "id": "cierre",
+      "rol": "contexto",
+      "t_in": 13.9,
+      "t_out": 16.7,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "LOOP: vuelve al vertido humeante (cámara lenta). CTA suave: 'pasá a probarlo'.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-vertido-slow.mp4", "match": { "categoria": "proceso", "palabras": ["v60", "vertido", "vapor"] } }
+        ]
+      },
+      "overlays": [
+        { "componente": "LowerThird", "props": { "texto": "@bruma.cafe", "sub": "Villa Crespo · de 8 a 19" } }
+      ]
+    }
+  ],
+
+  "audio": {
+    "modo": "propio",
+    "voz": {
+      "texto": "¿Qué tiene este grano... que no podíamos esperar para tostarlo? — Cambiamos el origen del mes. Es un Etiopía Yirgacheffe... recién tostado, ¡y nos tiene un poco obsesionados! — Esta semana lo tenés en filtrado, en la barra. Pasá a probarlo.",
+      "voz_tts": "es-AR-TomasNeural",
+      "rate": "-5%"
+    },
+    "musica": { "src": "music.mp3", "volumen": 0.2, "mood": "lofi cálido", "duck": true },
+    "sfx": [
+      { "tipo": "impact", "archivo": "sfx-impact.mp3", "t": 0.0, "vol": 0.4 },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "grano" },
+      { "tipo": "riser", "archivo": "sfx-riser.mp3", "t": 4.6, "vol": 0.4 },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "reveal" },
+      { "tipo": "impact", "archivo": "sfx-impact.mp3", "corte": "reveal", "vol": 0.6 },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "filtrado" },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "cierre" }
+    ]
+  },
+
+  "subtitulos": { "auto": true, "estilo": "marcador", "maxPalabras": 4 },
+  "copy": {
+    "caption": "Cambiamos el origen del mes y este nos tiene un poco obsesionados.\n\nEs un Etiopía Yirgacheffe lavado: el tipo de grano que, cuando lo probás en filtrado, parás un segundo a preguntarte qué es eso que estás sintiendo.\n\nEsta semana lo tenés en V60 y Aeropress en la barra. Pasá a probarlo — y después te contamos todo lo que tiene adentro.\n\n📍 Villa Crespo, de 8 a 19.",
+    "hashtags": ["#cafedeespecialidad", "#villacrespo", "#etiopiayirgacheffe", "#origendelmes", "#cafefiltrado"]
+  }
+}

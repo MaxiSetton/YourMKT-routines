@@ -1,0 +1,76 @@
+{
+  "piece_id": "conoce-bruma-dia4",
+  "carpeta": "bruma-conoce-bruma",
+  "dia": 4,
+  "fecha": "2026-06-26",
+  "negocio": {
+    "nombre": "Bruma Café",
+    "instagram": "@bruma.cafe",
+    "sitio_web": "https://brumacafe.com.ar",
+    "tono_marca": "cercano",
+    "tono_detalle": "Hablamos de vos. Cálidos, un poco nerd con el café pero sin sobrar a nadie — explicamos sin bajar línea. Humor suave, nada de signos de exclamación de más ni mayúsculas gritando. Argentino neutro (\"dale\", \"te va a encantar\", \"pasá\").",
+    "evitar": "Emojis en exceso, lenguaje corporativo (\"disfrutá de la mejor experiencia\"), promesas vacías, hablar de \"el mejor café del mundo\", fotos con flash o filtros saturados, hashtags genéricos tipo #coffeelover #instagood. No usar inglés innecesario.",
+    "estetica_visual": "Luz natural, tonos tierra y crema, madera clara, mucho vapor y texturas (latte art, miga de medialuna, granos). Fotos con poca saturación, cálidas, estilo editorial pero real (nada de stock). Tipografía serif para títulos.",
+    "propuesta_valor": "Café trazable de origen, tostado propio y atención que te explica qué estás tomando — sin pretensión. El mejor flat white del barrio y medialunas que se terminan a las 11am.",
+    "color_primario": "#a0522d",
+    "color_acento": "#6b8e23",
+    "color_fondo": "#fffdd0",
+    "vibe_tipografico": "moderna",
+    "voz_preferencia": "es-AR-TomasNeural",
+    "logo_url": "1e04265d-55c5-4fbc-bdd8-64007d57c987/brand/logo-1781551849259.png"
+  },
+  "campania": {
+    "id": "fd05a161-e91f-4698-a4eb-b9b98eeb037e",
+    "nombre": "Conocé Bruma — el café del barrio",
+    "brief": "Campaña de invierno para instalar a Bruma como \"el café del barrio\". No estamos vendiendo una promo, estamos invitando a conocer el lugar. Tono cálido y nerd-del-café sin sobrar a nadie, argentino neutro. Evitar lenguaje corporativo, \"la mejor experiencia\", emojis de más y hashtags genéricos.",
+    "objetivo": "Dar a conocer el local entre gente del barrio que todavía no lo pisó y convertirlo en su café de cabecera. Sumar visitas nuevas y primeras veces.",
+    "que_promociona": "El lugar en sí: Bruma como café de especialidad para venir a tomar algo bien hecho, trabajar con la notebook entre semana o juntarse los findes. No es un descuento ni un producto puntual.",
+    "fecha_inicio": "2026-06-23",
+    "duracion_dias": 7,
+    "nivel_conciencia": "consciente_solucion",
+    "audiencia_objetivo": "mixta",
+    "elementos_especificos": "Mostrar el local de verdad.\nQue se entienda que tostamos nuestro propio grano de origen único (eso nos diferencia del café de cadena).\nDejar claro que entre semana podés venir a trabajar con la notebook sin que te apuren.\nMencionar Villa Crespo y la dirección (Río de Janeiro 655) y el horario 8 a 19h.\nDestacar el flat white y las medialunas.\nDecir que hay opciones sin TACC y veganas.\nÁngulo de invierno: el café como refugio del frío. Sin sonar a folleto"
+  },
+  "post": {
+    "id": "bbd94eb5-d011-4955-bddc-3698e06523e6",
+    "fecha": "2026-06-26",
+    "hora": "13:00:00",
+    "formato": "reel",
+    "estado": "borrador",
+    "version": 1,
+    "rol": "prueba",
+    "pilar": "El oficio / diferenciador (tueste propio)",
+    "angulo": "Reel del oficio (~15s) con ritmo de cortes: el tueste propio de origen único como diferenciador vs la cadena. Manos reales del barista (ancla humana) + macros sensoriales de grano/vapor. Hook contrarian en el primer frame.",
+    "hook": "El café de cadena llegó tostado hace meses. El nuestro lo tostamos acá.",
+    "hook_formula": "contrarian (contraste con la cadena)",
+    "cta": "Probá un café de origen en la barra: Río de Janeiro 655.",
+    "texto": "Tostamos nuestro propio grano de origen único, acá en Villa Crespo. No es café de cadena que viajó meses: es grano trazable, tostado por nosotros y molido al momento. Por eso sabe distinto. Vení a probar la diferencia.",
+    "no_repetir": "El diferenciador es el tueste/origen. No repetir el ambiente del local (Días 2/3) ni mostrar el producto terminado como protagonista (eso es el Día 5).",
+    "media_url": null,
+    "media_tipo": null
+  },
+  "assets": [
+    {
+      "id": "93ad5f28-efed-40c6-918c-e8e7aa44991b",
+      "tipo": "video",
+      "categoria": "proceso",
+      "origen": "real",
+      "descripcion": "[A pedir al cliente] Clip vertical ~10s de las manos del barista en el oficio: moler el grano, el vapor de la leche y el latte art del flat white. Plano cercano a las manos, luz natural. Ancla humana del Día 4 (tueste propio / prueba). Un clip corto, ~10 segundos, no más.",
+      "prompt": null,
+      "url": "1e04265d-55c5-4fbc-bdd8-64007d57c987/fd05a161-e91f-4698-a4eb-b9b98eeb037e/1781886289697-Barista_making_flat_white_latte_202606191324.mp4",
+      "nombre_archivo": "Barista_making_flat_white_latte_202606191324.mp4",
+      "archivo_local": "bruma-conoce-bruma/asset-proceso-1.mp4"
+    },
+    {
+      "id": "a243fea2-3e32-4e24-995e-d1c2dca38098",
+      "tipo": "video",
+      "categoria": "proceso",
+      "origen": "a_generar",
+      "descripcion": "Sensorial del tueste: macro de granos tostados claros cayendo, textura del grano y vapor del tueste. Sin manos ni texto. Complemento del Día 4 (el footage real de manos manda).",
+      "prompt": "macro close-up of light-roasted coffee beans tumbling, warm roastery light, subtle smoke and steam, shallow depth of field, no hands, no text, photoreal editorial, warm tones, vertical 9:16",
+      "url": null,
+      "nombre_archivo": null,
+      "archivo_local": null
+    }
+  ]
+}

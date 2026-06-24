@@ -1,0 +1,133 @@
+{
+  "id": "bruma-senales",
+  "arquetipo": "educativo",
+  "formato": "reel",
+  "aspect": "9:16",
+  "fps": 30,
+  "duracion_seg": 17.6,
+
+  "marca": {
+    "nombre": "BRUMA",
+    "colores": {
+      "primario": "#A0522D",
+      "secundario": "#4B3621",
+      "acento": "#6B8E23",
+      "fondo": "#FFFDD0",
+      "texto": "#3A2A1E",
+      "textoInverso": "#FFFDD0"
+    },
+    "fuenteTitulo": "Fraunces, Georgia, serif",
+    "fuenteTexto": "Montserrat, system-ui, sans-serif"
+  },
+
+  "escenas": [
+    {
+      "id": "hook",
+      "rol": "hook",
+      "t_in": 0,
+      "t_out": 5.0,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "FRAME 0 = miniatura: vertido humeante en el V60 (real). La voz abre con la pregunta-gancho: '¿cómo sabés si tu café es de especialidad de verdad?'. A los ~3.4s entra el sello '3 señales'.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-vertido.mp4", "match": { "categoria": "proceso", "palabras": ["v60", "vertido", "vapor"] } }
+        ]
+      },
+      "overlays": [
+        { "componente": "BrandTag", "props": { "nombre": "BRUMA", "logo": "logo-limpio.png" } },
+        { "componente": "PopUp", "props": { "texto": "3 señales", "emoji": "☕", "posicion": "tr", "color": "acento", "rotacion": -4, "delay": 100 } }
+      ]
+    },
+    {
+      "id": "senal1",
+      "rol": "paso",
+      "t_in": 5.0,
+      "t_out": 8.4,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "El bloom en cámara lenta: le tiran agua y el lecho se hincha y burbujea. REAL. Señal 1 = grano fresco.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-bloom-slow.mp4", "match": { "categoria": "proceso", "palabras": ["bloom", "burbuja"] } }
+        ]
+      },
+      "overlays": [
+        { "componente": "PopUp", "props": { "texto": "grano fresco", "sub": "se hincha al mojarlo", "posicion": "tr", "color": "acento", "rotacion": -3, "delay": 16 } }
+      ]
+    },
+    {
+      "id": "senal2",
+      "rol": "paso",
+      "t_in": 8.4,
+      "t_out": 10.4,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Macro del café recién molido cayendo (IA, Wan2.2). Señal 2 = molido al momento.",
+        "fuentes": [
+          { "tipo": "video_generado", "archivo": "dia4-molienda.mp4", "prompt_movimiento": "Cinematic extreme macro of freshly ground coffee falling from a grinder chute into a cone-shaped pile, grounds tumbling, fine dust in warm backlight, dark background, slow dolly-in, photoreal.", "negative": "low quality, blurry, distorted, morphing, warping, flickering, text, watermark, hands, faces" },
+          { "tipo": "asset_cliente", "archivo": "dia4-bloom.mp4" }
+        ]
+      },
+      "overlays": [
+        { "componente": "PopUp", "props": { "texto": "molido al momento", "posicion": "tr", "color": "primario", "rotacion": 3, "delay": 8 } }
+      ]
+    },
+    {
+      "id": "senal3",
+      "rol": "paso",
+      "t_in": 10.4,
+      "t_out": 13.0,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Vertido lento en círculos, goteo parejo al server. REAL. Señal 3 = filtrado a mano.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-pour2.mp4", "match": { "categoria": "proceso", "palabras": ["vertido", "circulos", "goteo"] } }
+        ]
+      },
+      "overlays": [
+        { "componente": "PopUp", "props": { "texto": "filtrado a mano", "posicion": "tr", "color": "acento", "rotacion": -3, "delay": 10 } }
+      ]
+    },
+    {
+      "id": "cierre",
+      "rol": "contexto",
+      "t_in": 13.0,
+      "t_out": 17.6,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "LOOP: vuelve al vertido humeante del hook (en leve cámara lenta para cubrir el cierre sin congelar). Payoff: 'si ves las tres, es café de verdad. Eso es Bruma.' Sin CTA duro.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-vertido-slow.mp4", "match": { "categoria": "proceso", "palabras": ["v60", "vertido", "vapor"] } }
+        ]
+      },
+      "overlays": [
+        { "componente": "PopUp", "props": { "texto": "café de verdad", "emoji": "✓", "posicion": "center", "color": "primario", "rotacion": -2, "delay": 10 } },
+        { "componente": "LowerThird", "props": { "texto": "@bruma.cafe", "sub": "Villa Crespo · de 8 a 19" } }
+      ]
+    }
+  ],
+
+  "audio": {
+    "modo": "propio",
+    "voz": {
+      "texto": "¿Cómo sabés si tu café es de especialidad de verdad? Tres señales. Le tiran agua y se hincha: grano fresco. Lo muelen al momento. Y lo filtran a mano, sin apuro. Si ves las tres, es café de verdad. Eso es Bruma.",
+      "voz_tts": "es-AR-TomasNeural"
+    },
+    "musica": { "src": "music.mp3", "volumen": 0.2, "mood": "lofi cálido", "duck": true },
+    "sfx": [
+      { "tipo": "impact", "archivo": "sfx-impact.mp3", "t": 0.0, "vol": 0.4 },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "senal1" },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "senal2" },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "senal3" },
+      { "tipo": "riser", "archivo": "sfx-riser.mp3", "t": 11.4, "vol": 0.4 },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "cierre" },
+      { "tipo": "impact", "archivo": "sfx-impact.mp3", "corte": "cierre", "vol": 0.6 },
+      { "tipo": "pop", "archivo": "sfx-pop.mp3", "corte": "cierre", "vol": 0.6 }
+    ]
+  },
+
+  "subtitulos": { "auto": true, "estilo": "marcador", "maxPalabras": 4 },
+  "copy": {
+    "caption": "¿Cómo sabés si tu café es de especialidad de verdad? Tres señales rápidas:\n\n1. Le tirás agua y el café se hincha (el 'bloom') → el grano es fresco.\n2. Lo muelen en el momento, no de una bolsa abierta hace semanas.\n3. Lo filtran a mano, sin apuro, para extraer parejo.\n\nSi ves las tres, estás tomando café de verdad. En Bruma, las tres — Villa Crespo, de 8 a 19.",
+    "hashtags": ["#cafedeespecialidad", "#villacrespo", "#v60", "#cafefiltrado", "#bloom"]
+  }
+}

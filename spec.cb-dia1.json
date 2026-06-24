@@ -1,0 +1,129 @@
+{
+  "id": "bruma-cb-dia1",
+  "arquetipo": "antes_despues",
+  "formato": "reel",
+  "aspect": "9:16",
+  "fps": 30,
+  "duracion_seg": 18.3,
+
+  "marca": {
+    "nombre": "BRUMA",
+    "colores": {
+      "primario": "#a0522d",
+      "secundario": "#4b3621",
+      "acento": "#6b8e23",
+      "fondo": "#fffdd0",
+      "texto": "#2b1a12",
+      "textoInverso": "#fffdd0"
+    },
+    "fuenteTitulo": "Fraunces, Georgia, serif",
+    "fuenteTexto": "Montserrat, system-ui, sans-serif"
+  },
+
+  "escenas": [
+    {
+      "id": "vapor",
+      "rol": "hook",
+      "t_in": 0,
+      "t_out": 2.5,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "FRAME 0 = miniatura. Macro de vapor espeso subiendo y enroscándose desde una taza recién servida, llenando el cuadro; luz cálida lateral que atraviesa el humo, fondo oscuro y cálido. El movimiento (vapor + dolly-in) ya está ocurriendo en el primer frame. La voz tira el contraste ('Afuera, seis grados') mientras se ve el calor. Es el ancla del LOOP: el reel vuelve acá. NO se muestra el local real (eso es el Día 2): puro clima.",
+        "fuentes": [
+          { "tipo": "video_generado", "archivo": "cb-dia1-vapor.mp4", "base": "imagen_generada", "base_archivo": "cb-dia1-vapor.jpg", "prompt_movimiento": "Thick steam billowing and curling upward, filling the frame, slow cinematic dolly-in toward the cup, warm golden light flickering gently through the rising vapor, living dynamic steam, building, photoreal", "negative": "morphing, warping, distortion, flickering, jitter, shaky camera, text, watermark, logo, hands, faces, plastic, cgi" },
+          { "tipo": "imagen_generada", "archivo": "cb-dia1-vapor.jpg", "prompt": "Extreme close-up macro of thick steam rising and curling from freshly poured hot coffee in a dark ceramic cup, warm golden directional side light cutting through the steam, deep moody dark warm background, glossy crema surface barely visible at the bottom, editorial food photography, photorealistic, shallow depth of field, low saturation warm earthy tones, fine film grain, vertical 9:16 composition, no text, no hands, no faces, no logos" },
+          { "tipo": "kenburns", "archivo": "cb-dia1-vapor.jpg" }
+        ]
+      },
+      "overlays": [
+        { "componente": "BrandTag", "props": { "nombre": "BRUMA", "logo": "logo-limpio.png" } }
+      ]
+    },
+    {
+      "id": "ventana",
+      "rol": "contexto",
+      "t_in": 2.5,
+      "t_out": 5.2,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Paga la palabra 'frío' del hook: ventana empañada vista desde adentro, calle azul-gris helada y borrosa afuera, interior dorado que se refleja en el vidrio mojado. 'Y vos, del lado de adentro' — estás en el refugio. Una gota de condensación baja despacio. Bokeh NO reconocible (no es el local real, es clima).",
+        "fuentes": [
+          { "tipo": "video_generado", "archivo": "cb-dia1-ventana.mp4", "base": "imagen_generada", "base_archivo": "cb-dia1-ventana.jpg", "prompt_movimiento": "A single condensation droplet slowly tracing down the cold foggy glass, fog softly breathing and shifting on the window, faint blur of the cold empty street outside, slow gentle push-in toward the window, intimate, photoreal", "negative": "morphing, warping, distortion, flickering, jitter, shaky camera, text, watermark, logo, hands, faces, plastic, cgi" },
+          { "tipo": "imagen_generada", "archivo": "cb-dia1-ventana.jpg", "prompt": "View from inside a cozy specialty coffee shop looking out through a foggy window on a cold winter morning, heavy condensation and water droplets on the glass, cold blue-grey blurred empty street outside, warm golden interior light glowing and reflecting on the wet glass, soft bokeh, moody editorial photography, photorealistic, low saturation, warm interior versus cold exterior contrast, shallow depth of field, fine film grain, vertical 9:16 composition, no text, no people, no faces" },
+          { "tipo": "kenburns", "archivo": "cb-dia1-ventana.jpg" }
+        ]
+      },
+      "overlays": []
+    },
+    {
+      "id": "madera",
+      "rol": "contexto",
+      "t_in": 5.2,
+      "t_out": 8.6,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Beat-foto deliberado (still + Ken Burns paneo): taza humeante sobre madera clara junto a la ventana, luz baja de invierno barriendo la veta, manta tejida al borde del cuadro, bokeh cálido no reconocible al fondo. 'Una taza que humea, madera y luz tibia'. Sin manos, sin etiqueta, sin texto.",
+        "fuentes": [
+          { "tipo": "kenburns", "archivo": "cb-dia1-madera.jpg" },
+          { "tipo": "imagen_generada", "archivo": "cb-dia1-madera.jpg", "prompt": "Close-up of a single coffee cup with faint wisps of steam resting on a warm light wooden table next to a window, soft low winter daylight raking across the wood grain, cozy unrecognizable warm blurred interior bokeh in the background, a knitted blanket texture at the edge of frame, editorial photography, photorealistic, warm earthy low-saturation tones, shallow depth of field, fine film grain, vertical 9:16 composition, no text, no people, no faces" }
+        ]
+      },
+      "overlays": []
+    },
+    {
+      "id": "crema",
+      "rol": "contexto",
+      "t_in": 8.6,
+      "t_out": 13.0,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Pico emocional íntimo: macro cenital de la crema marmolada de un flat white, hipnótico, still + Ken Burns push-in suave. 'Nadie que te apure. Quedate el rato que quieras'. Sin letras de latte art (la IA las arruina), sin manos.",
+        "fuentes": [
+          { "tipo": "kenburns", "archivo": "cb-dia1-crema.jpg" },
+          { "tipo": "imagen_generada", "archivo": "cb-dia1-crema.jpg", "prompt": "Extreme macro top-down of a flat white coffee with soft marbled crema swirl patterns in a ceramic cup, warm directional light, glossy velvety surface, editorial food photography, photorealistic, shallow depth of field, low saturation warm earthy palette, fine film grain, vertical 9:16 composition, no text, no latte art letters, no hands, no faces" }
+        ]
+      },
+      "overlays": []
+    },
+    {
+      "id": "cierre",
+      "rol": "cta",
+      "t_in": 13.0,
+      "t_out": 18.3,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "LOOP: vuelve al mismo vapor del frame 0 → el último frame ≈ el primero, reinicia sin costura. La voz recontextualiza el arranque: 'Bruma, en Villa Crespo. Cuando apriete el frío, ya sabés dónde'. CTA suave por lower-third, sin venta dura.",
+        "fuentes": [
+          { "tipo": "video_generado", "archivo": "cb-dia1-vapor.mp4", "base": "imagen_generada", "base_archivo": "cb-dia1-vapor.jpg", "prompt_movimiento": "Thick steam billowing and curling upward, filling the frame, slow cinematic dolly-in toward the cup, warm golden light flickering gently through the rising vapor, living dynamic steam, building, photoreal", "negative": "morphing, warping, distortion, flickering, jitter, shaky camera, text, watermark, logo, hands, faces, plastic, cgi" },
+          { "tipo": "kenburns", "archivo": "cb-dia1-vapor.jpg" }
+        ]
+      },
+      "overlays": [
+        { "componente": "LowerThird", "props": { "texto": "@bruma.cafe", "sub": "Villa Crespo · Río de Janeiro 655 · de 8 a 19" } }
+      ]
+    }
+  ],
+
+  "audio": {
+    "modo": "propio",
+    "voz": {
+      "texto": "Afuera, seis grados. Y vos, del lado de adentro. Una taza que humea, madera y luz tibia. Nadie que te apure. Quedate el rato que quieras. Bruma, en Villa Crespo. Cuando apriete el frío, ya sabés dónde.",
+      "voz_tts": "es-AR-TomasNeural"
+    },
+    "musica": { "src": "music.mp3", "volumen": 0.18, "mood": "lofi cálido invernal", "duck": true },
+    "sfx": [
+      { "tipo": "impact", "archivo": "sfx-impact.mp3", "t": 0.0, "vol": 0.3 },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "ventana", "vol": 0.28 },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "madera", "vol": 0.28 },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "crema", "vol": 0.28 },
+      { "tipo": "impact", "archivo": "sfx-impact.mp3", "corte": "cierre", "vol": 0.32 }
+    ]
+  },
+
+  "subtitulos": { "auto": true, "estilo": "marcador", "maxPalabras": 4 },
+
+  "copy": {
+    "caption": "Café de especialidad en Villa Crespo. Cuando afuera aprieta el frío, Bruma es para meterse: una taza que humea, madera, luz tibia y nadie que te apure. Quedate a trabajar o a no hacer nada, el rato que quieras.\n\nRío de Janeiro 655, Villa Crespo. De 8 a 19.\n\nGuardalo para tu próxima escapada del frío.",
+    "hashtags": ["#villacrespo", "#cafedeespecialidad", "#villacrespocafe", "#brumacafe", "#cafeporteño"]
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "id": "conoce-bruma-dia4",
+  "carpeta": "bruma-conoce-bruma",
+  "arquetipo": "detras_escena",
+  "formato": "reel",
+  "aspect": "9:16",
+  "fps": 30,
+  "duracion_seg": 15.22,
+  "marca": {
+    "nombre": "Bruma Café",
+    "colores": {
+      "primario": "#a0522d",
+      "secundario": "#d2b48c",
+      "acento": "#6b8e23",
+      "fondo": "#fffdd0",
+      "texto": "#2c1e16",
+      "textoInverso": "#fffdd0"
+    },
+    "fuenteTitulo": "Playfair Display",
+    "fuenteTexto": "Inter"
+  },
+  "escenas": [
+    {
+      "id": "corte-hook",
+      "rol": "hook",
+      "t_in": 0,
+      "t_out": 1.94,
+      "sync_word_idx": 7,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Macro de nuestro grano recien tostado de origen unico cayendo con vapor del tueste — el frame 0 contradice 'tostado hace meses' y muestra el diferenciador (tueste propio).",
+        "fuentes": [
+          {
+            "tipo": "video_generado",
+            "archivo": "cb-d4-tueste.mp4",
+            "base": "imagen_generada",
+            "base_archivo": "cb-d4-tueste.jpg",
+            "prompt_movimiento": "freshly roasted coffee beans tumbling and cascading down, steam rising and swirling upward, smooth slow camera push-in, warm flickering light, dynamic cinematic motion",
+            "negative": "morphing, warping, distortion, flickering edges, jitter, shaky camera, text, watermark, logo, hands, faces, deformed, plastic, cgi"
+          },
+          {
+            "tipo": "kenburns",
+            "archivo": "cb-d4-tueste.jpg"
+          },
+          {
+            "tipo": "imagen_generada",
+            "archivo": "cb-d4-tueste.jpg",
+            "prompt": "Extreme macro close-up of freshly roasted single-origin coffee beans, light-medium roast, glossy oily surface, rich warm brown tones, scattered on light wood, soft natural window light from the left, thin wisps of steam, shallow depth of field, editorial food photography, warm earthy color palette, crisp focus, generous negative space at the bottom, no text, vertical 9:16"
+          }
+        ]
+      },
+      "overlays": [
+        {
+          "componente": "BrandTag",
+          "props": {
+            "nombre": "Bruma Café",
+            "logo": "logo-limpio.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "corte-grind",
+      "rol": "producto",
+      "t_in": 1.94,
+      "t_out": 5.66,
+      "sync_word_idx": 14,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Manos reales del barista: el grano cae molido fresco al portafiltro. Paga 'lo tostamos y molemos acá'. Ancla humana, prueba de que el lugar existe.",
+        "fuentes": [
+          {
+            "tipo": "asset_cliente",
+            "archivo": "cb-d4-grind.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "corte-tamp",
+      "rol": "producto",
+      "t_in": 5.66,
+      "t_out": 8.78,
+      "sync_word_idx": 21,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Manos del barista prensando el cafe (tamp). El oficio: grano de origen unico, de Villa Crespo.",
+        "fuentes": [
+          {
+            "tipo": "asset_cliente",
+            "archivo": "cb-d4-tamp.mp4"
+          }
+        ]
+      },
+      "overlays": [
+        {
+          "componente": "PopUp",
+          "props": {
+            "texto": "tueste propio",
+            "posicion": "tr",
+            "color": "primario",
+            "rotacion": -3
+          }
+        }
+      ]
+    },
+    {
+      "id": "corte-steam",
+      "rol": "beneficios",
+      "t_in": 8.78,
+      "t_out": 11.48,
+      "sync_word_idx": 25,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Vapor de la leche subiendo (texturado), sensorial — paga el payoff verbal 'por eso sabe distinto'.",
+        "fuentes": [
+          {
+            "tipo": "asset_cliente",
+            "archivo": "cb-d4-steam.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "corte-cta",
+      "rol": "cta",
+      "t_in": 11.48,
+      "t_out": 15.22,
+      "sync_word_idx": 35,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Latte art del flat white terminado (payoff visual y cierre que invita a venir). El resultado del oficio.",
+        "fuentes": [
+          {
+            "tipo": "asset_cliente",
+            "archivo": "cb-d4-art.mp4"
+          }
+        ]
+      },
+      "overlays": [
+        {
+          "componente": "BrandTag",
+          "props": {
+            "nombre": "Bruma Café",
+            "logo": "logo-limpio.png"
+          }
+        },
+        {
+          "componente": "LowerThird",
+          "props": {
+            "texto": "Todos los días",
+            "sub": "de 8 a 19h"
+          }
+        }
+      ]
+    }
+  ],
+  "audio": {
+    "modo": "propio",
+    "voz": {
+      "texto": "El café de cadena se tostó hace MESES. [PAUSA=0.9] El nuestro lo tostamos y molemos acá. [PAUSA=0.8] Grano de origen único, de Villa Crespo. [PAUSA=1.0] Por eso sabe distinto. [PAUSA=1.0] Vení a probarlo a la barra. Río de Janeiro 655.",
+      "voz_tts": "es-AR-TomasNeural",
+      "rate": "0.85"
+    },
+    "musica": {
+      "src": "cb-d4-music.mp3",
+      "volumen": 0.6,
+      "mood": "guitarra cálida / lofi acústico — PRESENTE; el ducking la baja bajo la voz, no la apaga",
+      "duck": true
+    },
+    "sfx": [
+      {
+        "tipo": "whoosh",
+        "archivo": "whoosh-fx.wav",
+        "corte": "corte-grind",
+        "vol": 0.4
+      },
+      {
+        "tipo": "pop",
+        "archivo": "pop-hq.wav",
+        "corte": "corte-tamp",
+        "vol": 0.5
+      },
+      {
+        "tipo": "whoosh",
+        "archivo": "whoosh-fx.wav",
+        "corte": "corte-steam",
+        "vol": 0.4
+      },
+      {
+        "tipo": "pop",
+        "archivo": "pop-hq.wav",
+        "corte": "corte-cta",
+        "vol": 0.5
+      }
+    ]
+  },
+  "subtitulos": {
+    "auto": true,
+    "estilo": "karaoke",
+    "maxPalabras": 4
+  },
+  "copy": {
+    "caption": "El café de cadena se tostó hace meses, lejos de tu taza. El nuestro lo tostamos y molemos acá, en Villa Crespo: grano de origen único, molido al momento. Por eso sabe distinto. Vení a probarlo a la barra, Río de Janeiro 655 — todos los días de 8 a 19h. ☕",
+    "hashtags": [
+      "BrumaCafe",
+      "TuestePropio",
+      "CafeDeOrigen",
+      "CafeDeEspecialidad",
+      "VillaCrespo"
+    ]
+  }
+}

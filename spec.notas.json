@@ -1,0 +1,150 @@
+{
+  "id": "bruma-notas",
+  "arquetipo": "promo",
+  "formato": "reel",
+  "aspect": "9:16",
+  "fps": 30,
+  "duracion_seg": 20.2,
+
+  "marca": {
+    "nombre": "BRUMA",
+    "colores": {
+      "primario": "#A0522D",
+      "secundario": "#4B3621",
+      "acento": "#6B8E23",
+      "fondo": "#FFFDD0",
+      "texto": "#3A2A1E",
+      "textoInverso": "#FFFDD0"
+    },
+    "fuenteTitulo": "Fraunces, Georgia, serif",
+    "fuenteTexto": "Montserrat, system-ui, sans-serif"
+  },
+
+  "escenas": [
+    {
+      "id": "hook",
+      "rol": "hook",
+      "t_in": 0,
+      "t_out": 3.5,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "FRAME 0 = vertido humeante real. Gancho: '¿un café que sabe a durazno, sin agregarle nada?'.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-vertido.mp4", "match": { "categoria": "proceso", "palabras": ["v60", "vertido", "vapor"] } }
+        ]
+      },
+      "overlays": [
+        { "componente": "BrandTag", "props": { "nombre": "BRUMA", "logo": "logo-limpio.png" } },
+        { "componente": "PopUp", "props": { "texto": "sin saborizantes", "posicion": "tr", "color": "primario", "rotacion": -4, "delay": 48 } }
+      ]
+    },
+    {
+      "id": "intro",
+      "rol": "producto",
+      "t_in": 3.5,
+      "t_out": 6.0,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Segundo plano real del vertido. La voz nombra el origen: 'es el Yirgacheffe del mes'.",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-pour2.mp4", "match": { "categoria": "proceso", "palabras": ["vertido", "goteo"] } }
+        ]
+      },
+      "overlays": [
+        { "componente": "BrandTag", "props": { "nombre": "BRUMA", "logo": "logo-limpio.png" } }
+      ]
+    },
+    {
+      "id": "jazmin",
+      "rol": "beneficios",
+      "t_in": 6.0,
+      "t_out": 8.7,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Nota floral, IMAGEN surreal generada (FLUX) + animada (i2v): café con jazmín flotando en el vapor.",
+        "fuentes": [
+          { "tipo": "video_generado", "archivo": "notas-jazmin.mp4", "prompt_movimiento": "White jasmine petals and steam drift and swirl gently upward above the coffee, the surface shimmers, slow dolly-in, dreamy cinematic motion", "negative": "morphing, warping, distortion, flickering, jitter, text, watermark, hands, faces, deformed" },
+          { "tipo": "imagen_generada", "archivo": "notas-jazmin.jpg", "base_archivo": "taza-base.jpg", "prompt": "Keep the same coffee cup, wooden table and cozy cafe background. Add delicate white jasmine flowers and petals floating and gently swirling on the rising steam above the cup. Dreamy soft golden light, surreal hyperreal, warm earthy tones, photorealistic, keep generous empty space at the top, no text" }
+        ]
+      },
+      "overlays": [
+        { "componente": "PopUp", "props": { "texto": "jazmín", "emoji": "🌸", "posicion": "tr", "color": "acento", "rotacion": -3, "delay": 8 } }
+      ]
+    },
+    {
+      "id": "bergamota",
+      "rol": "beneficios",
+      "t_in": 8.7,
+      "t_out": 12.0,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Nota cítrica, IMAGEN surreal generada (FLUX) + i2v: café con bergamota, cáscara y bruma cítrica.",
+        "fuentes": [
+          { "tipo": "video_generado", "archivo": "notas-bergamota.mp4", "prompt_movimiento": "Citrus zest mist and steam rise and swirl above the cup, a curl of bergamot peel slowly rotates, slow push-in, vibrant cinematic motion", "negative": "morphing, warping, distortion, flickering, jitter, text, watermark, hands, faces, deformed" },
+          { "tipo": "imagen_generada", "archivo": "notas-bergamota.jpg", "base_archivo": "taza-base.jpg", "prompt": "Keep the same coffee cup, wooden table and cozy cafe background. Add glowing bergamot citrus: bright orange peel curls and a fine citrus zest mist floating above the cup. Fresh vibrant light with a citrus pop, surreal hyperreal, photorealistic, keep generous empty space at the top, no text" }
+        ]
+      },
+      "overlays": [
+        { "componente": "PopUp", "props": { "texto": "bergamota", "emoji": "🍊", "posicion": "tr", "color": "primario", "rotacion": 3, "delay": 8 } }
+      ]
+    },
+    {
+      "id": "durazno",
+      "rol": "beneficios",
+      "t_in": 12.0,
+      "t_out": 15.0,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "Nota dulce, IMAGEN surreal generada (FLUX) + i2v: café junto a un durazno, una gota de néctar cae a la taza.",
+        "fuentes": [
+          { "tipo": "video_generado", "archivo": "notas-durazno.mp4", "prompt_movimiento": "A drop of peach nectar falls and ripples into the coffee surface, steam curls upward, the peach glistens, slow dolly-in, sweet dreamy cinematic motion", "negative": "morphing, warping, distortion, flickering, jitter, text, watermark, hands, faces, deformed" },
+          { "tipo": "imagen_generada", "archivo": "notas-durazno.jpg", "base_archivo": "taza-base.jpg", "prompt": "Keep the same coffee cup, wooden table and cozy cafe background. Add a ripe juicy peach beside the cup and a glistening drop of peach nectar merging into the coffee surface. Soft sweet golden light, warm peach and brown tones, surreal hyperreal, photorealistic, keep generous empty space at the top, no text" }
+        ]
+      },
+      "overlays": [
+        { "componente": "PopUp", "props": { "texto": "durazno", "emoji": "🍑", "posicion": "tr", "color": "acento", "rotacion": -3, "delay": 8 } }
+      ]
+    },
+    {
+      "id": "cierre",
+      "rol": "contexto",
+      "t_in": 15.0,
+      "t_out": 20.2,
+      "scrim": "bottom",
+      "visual": {
+        "intencion": "LOOP: vuelve al vertido humeante (cámara lenta), lo real. Payoff: 'todo eso ya está en el grano. Probalo en filtrado, en Bruma.'",
+        "fuentes": [
+          { "tipo": "asset_cliente", "archivo": "dia4-vertido-slow.mp4", "match": { "categoria": "proceso", "palabras": ["v60", "vertido", "vapor"] } }
+        ]
+      },
+      "overlays": [
+        { "componente": "LowerThird", "props": { "texto": "@bruma.cafe", "sub": "Yirgacheffe del mes · filtrado en V60" } }
+      ]
+    }
+  ],
+
+  "audio": {
+    "modo": "propio",
+    "voz": {
+      "texto": "¿Un café que sabe a durazno, sin agregarle nada? Es el Yirgacheffe del mes. Arranca floral, como a jazmín. En el medio aparece algo cítrico, tipo bergamota. Y cierra dulce, a durazno. Todo eso ya está en el grano. Probalo en filtrado, en Bruma.",
+      "voz_tts": "es-AR-TomasNeural"
+    },
+    "musica": { "src": "music.mp3", "volumen": 0.2, "mood": "lofi cálido", "duck": true },
+    "sfx": [
+      { "tipo": "impact", "archivo": "sfx-impact.mp3", "t": 0.0, "vol": 0.4 },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "intro" },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "jazmin" },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "bergamota" },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "durazno" },
+      { "tipo": "riser", "archivo": "sfx-riser.mp3", "t": 13.4, "vol": 0.4 },
+      { "tipo": "whoosh", "archivo": "sfx-whoosh.mp3", "corte": "cierre" },
+      { "tipo": "impact", "archivo": "sfx-impact.mp3", "corte": "cierre", "vol": 0.6 }
+    ]
+  },
+
+  "subtitulos": { "auto": true, "estilo": "marcador", "maxPalabras": 4 },
+  "copy": {
+    "caption": "¿Un café que sabe a durazno, sin agregarle absolutamente nada? Así es el Etiopía Yirgacheffe de este mes.\n\nEn la taza arranca floral (algo así como jazmín), en el medio aparece un cítrico tipo bergamota, y cierra dulce, a durazno. Todo eso ya está en el grano — café de origen, lavado, sin saborizantes.\n\nSe nota más en filtrado. Pasá a probarlo en V60 — Villa Crespo, de 8 a 19.",
+    "hashtags": ["#cafedeespecialidad", "#villacrespo", "#etiopiayirgacheffe", "#notasdecata", "#cafefiltrado"]
+  }
+}
