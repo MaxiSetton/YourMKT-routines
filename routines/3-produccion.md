@@ -1,8 +1,10 @@
 # Routine 3 — Producción (render + publicar)
 
 **Paso 5 del flujo.** Toma el `spec` ya dirigido (Routine 2) y **hace el post**: genera los recursos,
-renderiza la pieza determinista, mezcla el audio y la **sube a la app**. **Itera** con observaciones
-(re-genera un clip, cambia la música, re-renderiza) y re-publica.
+renderiza la pieza determinista, mezcla el audio y la **sube a la app**.
+Dos modos: **barrido diario** (trigger Horario, ej. 5am · sin params → produce todas las piezas
+pendientes del día, de todos los negocios) o **pieza puntual** (trigger API/n8n · con params → produce
+o itera una sola). **Itera** con observaciones (re-genera un clip, cambia la música, re-renderiza) y re-publica.
 
 > Esta etapa **no tiene skill**: es el pipeline determinista (Remotion + ffmpeg + OmniVoice). Tu
 > trabajo es **ejecutar la cadena en el orden correcto** y resolver lo que falte. No re-dirijas la
@@ -14,18 +16,37 @@ renderiza la pieza determinista, mezcla el audio y la **sube a la app**. **Itera
 
 ---
 
-## Entrada (la pasa n8n en el `text`) — igual que la Routine 2
+## Entrada — dos modos
 
+**A) Barrido diario** (trigger **Horario**, ej. 5am · **sin params**: no hay JSON después de
+"Parámetros:"). Producí **todas las piezas pendientes con fecha de HOY, de TODOS los negocios**.
+
+**B) Pieza puntual** (trigger **API/n8n** · **con params**). Producí o iterá una sola pieza:
 ```json
-{ "negocio": "bruma", "campania": "Conocé Bruma", "dia": 4, "formato": "reel",
-  "observaciones": "" }
+{ "negocio": "bruma", "campania": "Conocé Bruma", "dia": 4, "formato": "reel", "observaciones": "" }
 ```
-
-- `observaciones` vacío = **primera producción**. Con texto = **iteración** (re-hacé solo lo afectado).
+- `observaciones` vacío = primera producción; con texto = **iteración** (re-hacé solo lo afectado).
 
 ---
 
 ## Pasos
+
+### 0 · Determiná el modo y la lista de piezas a producir (service-role key)
+
+- **Con params** (modo B): la lista es esa sola pieza (`negocio`/`campania`/`dia`/`formato`).
+- **Sin params** (modo A, barrido): armá la lista de pendientes de HOY, de todos los negocios:
+  ```
+  hoy = $(date +%F)     # fecha del sandbox; el cron corre 5am. Si tu zona horaria desfasa el día, ajustá.
+  GET {URL}/rest/v1/posts?fecha=eq.<hoy>&spec=not.is.null&media_url=is.null&select=id,campaign_id,formato,rol&order=campaign_id
+  ```
+  Esos son los posts **dirigidos (con spec) y aún no producidos** que vencen hoy. Para cada uno resolvé
+  lo que `fetch:piece` necesita: `GET campaigns?id=eq.<campaign_id>&select=nombre,business_id,fecha_inicio`,
+  `GET businesses?id=eq.<business_id>&select=nombre`, y `dia = (fecha − fecha_inicio en días) + 1`.
+  - Posts de hoy **sin spec** → NO se pueden producir: anotalos como "falta dirigir (Routine 2)".
+  - Lista vacía → reportá "nada pendiente para hoy" y salí.
+  - *(Para recuperar atrasados además de hoy, cambiá `fecha=eq.<hoy>` por `fecha=lte.<hoy>`.)*
+
+### Por cada pieza de la lista, hacé estos 5 pasos (si una falla, anotala y seguí con la siguiente):
 
 1. **Resolvé el post y traé su spec** desde la DB (la Routine 2 ya lo escribió en `posts.spec`):
    ```
@@ -115,6 +136,8 @@ Interpretá las observaciones y re-hacé **solo lo afectado**, respetando el ord
 
 ## Salida (reportá esto)
 
-- Qué se produjo (formato, duración, `out/<id>-final.mp4` o slides), `media_url` publicado.
-- Recursos generados (clips/imágenes IA) y faltantes que quedaron en placeholder.
-- En iteración: qué se re-hizo. Cualquier paso que se haya degradado.
+- **Pieza puntual**: qué se produjo (formato, duración, `out/<id>-final.mp4` o slides), `media_url`
+  publicado; recursos IA generados y faltantes en placeholder; en iteración, qué se re-hizo; pasos degradados.
+- **Barrido diario**: una **tabla** con cada pieza de hoy — `negocio · día · formato` → **producida ✓**
+  (`media_url`) / **degradada** (qué faltó: voz, asset) / **falló** (motivo) / **sin spec** (falta Routine 2).
+  Más el total: N producidas, K fallidas/degradadas, y los posts que quedaron sin dirigir.

@@ -40,7 +40,9 @@ Dos modos, según venga o no `dia`:
 - `rethink` — opcional, solo en batch. `true` = re-dirige también las piezas que YA tienen spec. Por
   defecto **false**: el batch saltea las ya dirigidas (así es **resumible** si una corrida se cortó).
 
-Si falta `campania`, reportá el faltante y salí.
+**Params vacío** (no hay JSON después de "Parámetros:" — corrida de prueba sin n8n): asumí **modo batch**
+sobre la **campaña más reciente** de la DB (`GET campaigns?...&order=created_at.desc&limit=1` → su negocio)
+y **avisá** que usás defaults. Si viene con datos pero falta `campania`, reportá el faltante y salí.
 
 ---
 

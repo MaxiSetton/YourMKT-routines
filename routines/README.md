@@ -8,7 +8,7 @@ resultado en Supabase, que es lo que la web muestra.
 |---|---|---|---|---|
 | **1 · Calendario** | [`1-calendario.md`](1-calendario.md) | 2 | Piensa los posts de cada día → siembra el calendario (posts borrador + plan de assets + qué pedir al usuario) | liviana |
 | **2 · Dirección de pieza** | [`2-direccion-pieza.md`](2-direccion-pieza.md) | 3 + 4 | Piensa los posts a fondo (**todos de una**, o uno) → `spec` validado en `posts.spec`. Re-piensa/itera un día | liviana |
-| **3 · Producción** | [`3-produccion.md`](3-produccion.md) | 5 | Genera recursos, renderiza y **publica** la pieza. Itera con observaciones | **pesada** |
+| **3 · Producción** | [`3-produccion.md`](3-produccion.md) | 5 | **Barrido diario** (Horario 5am, sin params): produce las piezas pendientes de hoy de **todos** los negocios. O **una pieza** por API. Itera con observaciones | **pesada** |
 
 Cómo se relacionan: la **DB es el bus**. Routine 1 siembra `posts`; Routine 2 lee un post y le escribe
 `posts.spec`; Routine 3 lee `posts.spec`, produce y setea `posts.media_url`. Cada corrida es un clone
@@ -117,10 +117,14 @@ La creación práctica **se hace en la UI** (claude.ai/code/routines) o por CLI 
 necesita un **environment ya configurado** (el de los pasos 2–4) y el `POST /v1/code/triggers` exige un
 `session_request`/`job_config` que lo referencia — por eso no se puede crear "en seco" desde afuera antes
 de tener el environment. Creá 3 routines apuntando al repo + environment, y en el **prompt guardado** de
-cada una pegá el puntero correspondiente de "Prompts guardados" de abajo. No hace falta schedule: se
-disparan por API. (Si querés además un barrido nocturno, dales un cron.)
+cada una pegá el puntero correspondiente de "Prompts guardados" de abajo.
 
-Anotá el **routine_id** y el **token** de cada routine (los da su página) — n8n los usa.
+**Triggers por routine:** Routine **1** y **2** → **API** (las dispara n8n). Routine **3** → **Horario**
+(cron, ej. 5am) para el barrido diario de producción, y *opcionalmente* también **API** para producir una
+pieza puntual.
+
+Anotá el **routine_id** y el **token** de las que uses por API (Routine 1 y 2, y la 3 si la disparás
+puntual) — n8n los usa. La Routine 3 en modo barrido no necesita token: se dispara sola por el cron.
 
 ---
 
@@ -160,7 +164,10 @@ Body:
 { "negocio": "bruma", "campania": "Conocé Bruma", "dia": 4, "formato": "reel", "observaciones": "" }  // una
 ```
 
-**Routine 3 — Producción** (hacer/iterar el post) — mismos params que la 2:
+**Routine 3 — Producción.** Dos modos:
+- **Barrido diario** (trigger **Horario** ej. 5am, **sin** `text`): produce todas las piezas pendientes
+  de HOY de todos los negocios. No necesita n8n.
+- **Una pieza** (trigger **API**/n8n, **con** params):
 ```json
 { "negocio": "bruma", "campania": "Conocé Bruma", "dia": 4, "formato": "reel", "observaciones": "" }
 ```
