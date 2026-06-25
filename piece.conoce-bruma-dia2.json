@@ -1,0 +1,65 @@
+{
+  "piece_id": "conoce-bruma-dia2",
+  "carpeta": "bruma-conoce-bruma",
+  "dia": 2,
+  "fecha": "2026-06-24",
+  "negocio": {
+    "nombre": "Bruma Café",
+    "instagram": "@bruma.cafe",
+    "sitio_web": "https://brumacafe.com.ar",
+    "tono_marca": "cercano",
+    "tono_detalle": "Hablamos de vos. Cálidos, un poco nerd con el café pero sin sobrar a nadie — explicamos sin bajar línea. Humor suave, nada de signos de exclamación de más ni mayúsculas gritando. Argentino neutro (\"dale\", \"te va a encantar\", \"pasá\").",
+    "evitar": "Emojis en exceso, lenguaje corporativo (\"disfrutá de la mejor experiencia\"), promesas vacías, hablar de \"el mejor café del mundo\", fotos con flash o filtros saturados, hashtags genéricos tipo #coffeelover #instagood. No usar inglés innecesario.",
+    "estetica_visual": "Luz natural, tonos tierra y crema, madera clara, mucho vapor y texturas (latte art, miga de medialuna, granos). Fotos con poca saturación, cálidas, estilo editorial pero real (nada de stock). Tipografía serif para títulos.",
+    "propuesta_valor": "Café trazable de origen, tostado propio y atención que te explica qué estás tomando — sin pretensión. El mejor flat white del barrio y medialunas que se terminan a las 11am.",
+    "color_primario": "#a0522d",
+    "color_acento": "#6b8e23",
+    "color_fondo": "#fffdd0",
+    "vibe_tipografico": "moderna",
+    "voz_preferencia": "es-AR-TomasNeural",
+    "logo_url": "1e04265d-55c5-4fbc-bdd8-64007d57c987/brand/logo-1781551849259.png"
+  },
+  "campania": {
+    "id": "fd05a161-e91f-4698-a4eb-b9b98eeb037e",
+    "nombre": "Conocé Bruma — el café del barrio",
+    "brief": "Campaña de invierno para instalar a Bruma como \"el café del barrio\". No estamos vendiendo una promo, estamos invitando a conocer el lugar. Tono cálido y nerd-del-café sin sobrar a nadie, argentino neutro. Evitar lenguaje corporativo, \"la mejor experiencia\", emojis de más y hashtags genéricos.",
+    "objetivo": "Dar a conocer el local entre gente del barrio que todavía no lo pisó y convertirlo en su café de cabecera. Sumar visitas nuevas y primeras veces.",
+    "que_promociona": "El lugar en sí: Bruma como café de especialidad para venir a tomar algo bien hecho, trabajar con la notebook entre semana o juntarse los findes. No es un descuento ni un producto puntual.",
+    "fecha_inicio": "2026-06-23",
+    "duracion_dias": 7,
+    "nivel_conciencia": "consciente_solucion",
+    "audiencia_objetivo": "mixta",
+    "elementos_especificos": "Mostrar el local de verdad.\nQue se entienda que tostamos nuestro propio grano de origen único (eso nos diferencia del café de cadena).\nDejar claro que entre semana podés venir a trabajar con la notebook sin que te apuren.\nMencionar Villa Crespo y la dirección (Río de Janeiro 655) y el horario 8 a 19h.\nDestacar el flat white y las medialunas.\nDecir que hay opciones sin TACC y veganas.\nÁngulo de invierno: el café como refugio del frío. Sin sonar a folleto"
+  },
+  "post": {
+    "id": "e743de04-1339-4ba6-b33b-288839acfb7a",
+    "fecha": "2026-06-24",
+    "hora": "12:30:00",
+    "formato": "feed",
+    "estado": "borrador",
+    "version": 3,
+    "rol": "deseo",
+    "pilar": "El refugio / el lugar",
+    "angulo": "Carrusel reveal (6–8 slides) del local de verdad: barra a la vista, mesa comunitaria, madera, luz natural. Slide 1 = el hook; última slide = dirección + horario. Acá SÍ se muestra el lugar.",
+    "hook": "Pasaste mil veces por Río de Janeiro 655. Esto es lo que hay adentro.",
+    "hook_formula": "pregunta / curiosidad (open loop)",
+    "cta": "Pasá a conocerlo: Río de Janeiro 655, de 8 a 19.",
+    "texto": "Café de especialidad en Villa Crespo. Barra a la vista, mesa comunitaria, madera y luz natural — un local chico pensado para que te quedes, no para que pases rápido. Esto es Bruma. Pasá a conocerlo.",
+    "no_repetir": "No repetir el feeling abstracto del Día 1: acá es el espacio real. No tocar la carta (Día 5) ni el oficio del tueste (Día 4).",
+    "media_url": null,
+    "media_tipo": null
+  },
+  "assets": [
+    {
+      "id": "2a8b1db5-3202-4b0b-b6f1-da97f8a22f92",
+      "tipo": "video",
+      "categoria": "otro",
+      "origen": "a_pedir",
+      "descripcion": "[A pedir al cliente] Interior del local: barra a la vista, mesa comunitaria, madera y luz natural cálida; clientes de fondo desenfocados (sin caras identificables). Foto en alta + un clip vertical ~10s paneando el espacio. Para el reveal (Día 2) y el cierre (Día 7). No usar como dependencia del Día 1.",
+      "prompt": null,
+      "url": null,
+      "nombre_archivo": null,
+      "archivo_local": null
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "conoce-bruma-dia2",
+  "formato": "carrusel",
+  "aspect": "4:5",
+  "carpeta": "bruma-conoce-bruma",
+  "marca": {
+    "nombre": "Bruma",
+    "colores": {
+      "primario": "#A0522D",
+      "secundario": "#4B3621",
+      "acento": "#6B8E23",
+      "fondo": "#FFFDD0",
+      "texto": "#3A2A1E",
+      "textoInverso": "#FFFDD0"
+    },
+    "fuenteTitulo": "Fraunces, Georgia, serif",
+    "fuenteTexto": "Montserrat, system-ui, sans-serif"
+  },
+  "slides": [
+    {
+      "variante": "portada",
+      "kicker": "Villa Crespo",
+      "titulo": "Pasaste mil veces\npor acá.",
+      "cuerpo": "Río de Janeiro 655. Esto es lo que hay del otro lado de la puerta.",
+      "swipe": "deslizá →"
+    },
+    {
+      "variante": "concepto",
+      "kicker": "La barra",
+      "titulo": "Barra a la vista",
+      "cuerpo": "Ves cómo se prepara cada café, de principio a fin. Acá no pasa nada atrás de una cortina.",
+      "foto": "bruma-conoce-bruma/interior-barra.jpg"
+    },
+    {
+      "variante": "concepto",
+      "kicker": "La mesa",
+      "titulo": "Mesa comunitaria",
+      "cuerpo": "Una mesa larga de madera para compartir con quien caiga. Llegás solo, te vas con charla.",
+      "foto": "bruma-conoce-bruma/interior-mesa.jpg"
+    },
+    {
+      "variante": "concepto",
+      "kicker": "La luz",
+      "titulo": "Luz natural\ny madera",
+      "cuerpo": "Ventanales, madera clara y plantas. El tipo de lugar donde el rato se hace largo sin que te des cuenta.",
+      "foto": "bruma-conoce-bruma/interior-luz.jpg"
+    },
+    {
+      "variante": "concepto",
+      "kicker": "El refugio",
+      "titulo": "Quedate\nel rato que quieras",
+      "cuerpo": "Venís por un café y te quedás a trabajar con la notebook o a leer un rato. Cero apuro — el plan perfecto para los días de frío."
+    },
+    {
+      "variante": "cierre",
+      "titulo": "Pasá a conocerlo.",
+      "cuerpo": "Río de Janeiro 655, Villa Crespo.",
+      "pie": "@bruma.cafe · de 8 a 19"
+    }
+  ],
+  "copy": {
+    "caption": "Pasaste mil veces por Río de Janeiro 655 sin saber qué había adentro. Esto es Bruma: barra a la vista, una mesa comunitaria de madera, luz natural y cero apuro.\n\nEl tipo de lugar donde entrás por un café y te quedás un rato largo — a trabajar tranquilo o a leer mientras afuera hace frío. Pasá a conocerlo, Villa Crespo, de 8 a 19.",
+    "hashtags": [
+      "#villacrespo",
+      "#cafedeespecialidad",
+      "#brumacafe",
+      "#cafedebarrio",
+      "#buenosaires"
+    ]
+  }
+}
