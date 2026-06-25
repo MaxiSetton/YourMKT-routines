@@ -1,5 +1,6 @@
 {
   "piece_id": "conoce-bruma-dia5",
+  "carpeta": "bruma-conoce-bruma",
   "dia": 5,
   "fecha": "2026-06-27",
   "negocio": {
@@ -57,7 +58,8 @@
       "descripcion": "[A pedir al cliente] Foto en buena luz de la carta: un flat white con latte art recién hecho y medialunas en el plato; sumá una opción sin TACC y una vegana en cuadro. Etiqueta/producto real (la IA no inventa productos). Para el carrusel de la carta (Día 5).",
       "prompt": null,
       "url": null,
-      "nombre_archivo": null
+      "nombre_archivo": null,
+      "archivo_local": null
     }
   ]
 }

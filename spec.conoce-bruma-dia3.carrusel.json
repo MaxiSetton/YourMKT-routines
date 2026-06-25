@@ -1,0 +1,63 @@
+{
+  "id": "conoce-bruma-dia3",
+  "formato": "carrusel",
+  "aspect": "4:5",
+  "carpeta": "bruma-conoce-bruma",
+  "marca": {
+    "nombre": "Bruma",
+    "colores": {
+      "primario": "#A0522D",
+      "secundario": "#4B3621",
+      "acento": "#6B8E23",
+      "fondo": "#FFFDD0",
+      "texto": "#3A2A1E",
+      "textoInverso": "#FFFDD0"
+    },
+    "fuenteTitulo": "Fraunces, Georgia, serif",
+    "fuenteTexto": "Montserrat, system-ui, sans-serif"
+  },
+  "slides": [
+    {
+      "variante": "portada",
+      "kicker": "Entre semana",
+      "titulo": "Tu oficina\nqueda a la vuelta.",
+      "cuerpo": "Y abre a las 8. Café de especialidad como nuevo escritorio.",
+      "swipe": "deslizá →"
+    },
+    {
+      "variante": "concepto",
+      "kicker": "Wifi",
+      "titulo": "Wifi que anda",
+      "cuerpo": "Para esa videollamada que no podés cortar a la mitad."
+    },
+    {
+      "variante": "concepto",
+      "kicker": "Enchufes",
+      "titulo": "Enchufes de verdad",
+      "cuerpo": "Sentate cerca de uno y olvidate de la batería al 12%."
+    },
+    {
+      "variante": "concepto",
+      "kicker": "El café",
+      "titulo": "La taza, siempre llena",
+      "cuerpo": "Café de especialidad que se renueva. Se trabaja distinto con uno al lado."
+    },
+    {
+      "variante": "concepto",
+      "kicker": "La calma",
+      "titulo": "Nadie te apura",
+      "cuerpo": "Quedate las horas que necesites. Es esa clase de lugar.",
+      "foto": "bruma-conoce-bruma/rincon-notebook.jpg"
+    },
+    {
+      "variante": "cierre",
+      "titulo": "Veníte a trabajar\nun día de esta semana.",
+      "cuerpo": "Río de Janeiro 655, Villa Crespo.",
+      "pie": "@bruma.cafe · de 8 a 19"
+    }
+  ],
+  "copy": {
+    "caption": "¿Se puede trabajar en Bruma? Sí — y de hecho es uno de los mejores planes de la semana.\n\nWifi que anda, enchufes de verdad, café de especialidad que se renueva y nadie apurándote. Tu oficina del barrio, abierta de 8 a 19.\n\nVeníte a trabajar un día de esta semana. Río de Janeiro 655, Villa Crespo.",
+    "hashtags": ["#villacrespo", "#workfromcafe", "#cafedeespecialidad", "#brumacafe", "#trabajarencafe"]
+  }
+}

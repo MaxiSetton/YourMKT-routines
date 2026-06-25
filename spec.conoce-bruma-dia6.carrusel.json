@@ -1,0 +1,58 @@
+{
+  "id": "conoce-bruma-dia6",
+  "formato": "carrusel",
+  "aspect": "4:5",
+  "carpeta": "bruma-conoce-bruma",
+  "marca": {
+    "nombre": "Bruma",
+    "colores": {
+      "primario": "#A0522D",
+      "secundario": "#4B3621",
+      "acento": "#6B8E23",
+      "fondo": "#FFFDD0",
+      "texto": "#3A2A1E",
+      "textoInverso": "#FFFDD0"
+    },
+    "fuenteTitulo": "Fraunces, Georgia, serif",
+    "fuenteTexto": "Montserrat, system-ui, sans-serif"
+  },
+  "slides": [
+    {
+      "variante": "portada",
+      "kicker": "El barrio",
+      "titulo": "No somos\nuna cadena.",
+      "cuerpo": "Somos los que, en dos visitas, te van a aprender el nombre.",
+      "swipe": "deslizá →"
+    },
+    {
+      "variante": "concepto",
+      "kicker": "La cara",
+      "titulo": "Hola, soy el barista",
+      "cuerpo": "El mismo que te prepara el café te lo trae a la mesa. Sin intermediarios.",
+      "foto": "bruma-conoce-bruma/comunidad-barista.jpg"
+    },
+    {
+      "variante": "concepto",
+      "kicker": "Los findes",
+      "titulo": "La mesa se llena",
+      "cuerpo": "Sábado a la mañana, la mesa comunitaria es pura charla y olor a café.",
+      "foto": "bruma-conoce-bruma/comunidad-mesa.jpg"
+    },
+    {
+      "variante": "concepto",
+      "kicker": "Tu cabecera",
+      "titulo": "Tu café de cabecera",
+      "cuerpo": "El lugar al que volvés. El que ya sabe cómo te gusta el café."
+    },
+    {
+      "variante": "cierre",
+      "titulo": "Pasá este finde.",
+      "cuerpo": "Río de Janeiro 655, Villa Crespo.",
+      "pie": "@bruma.cafe · de 8 a 19"
+    }
+  ],
+  "copy": {
+    "caption": "No somos una cadena. Somos los que te van a aprender el nombre.\n\nEn Bruma, el barista que te prepara el café te lo trae a la mesa. Los findes la mesa comunitaria se llena de barrio. Es ese café de cabecera al que volvés porque ya saben cómo te gusta.\n\nPasá este finde. Río de Janeiro 655, Villa Crespo, de 8 a 19.",
+    "hashtags": ["#villacrespo", "#cafedebarrio", "#brumacafe", "#comunidad", "#cafedeespecialidad"]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "conoce-bruma-dia7",
+  "formato": "post",
+  "aspect": "4:5",
+  "carpeta": "bruma-conoce-bruma",
+  "marca": {
+    "nombre": "Bruma",
+    "colores": {
+      "primario": "#A0522D",
+      "secundario": "#4B3621",
+      "acento": "#6B8E23",
+      "fondo": "#FFFDD0",
+      "texto": "#3A2A1E",
+      "textoInverso": "#FFFDD0"
+    },
+    "fuenteTitulo": "Fraunces, Georgia, serif",
+    "fuenteTexto": "Montserrat, system-ui, sans-serif"
+  },
+  "slides": [
+    {
+      "variante": "cierre",
+      "titulo": "Te esperamos\nesta semana.",
+      "cuerpo": "Café de especialidad en Villa Crespo. Tostamos nuestro propio grano y hacemos el mejor flat white del barrio.",
+      "pie": "Río de Janeiro 655 · de 8 a 19 · @bruma.cafe"
+    }
+  ],
+  "copy": {
+    "caption": "Esta semana, date una vuelta. Bruma — café de especialidad en Villa Crespo, con tueste propio, flat white de campeonato y medialunas que se terminan a las 11.\n\nRío de Janeiro 655. De 8 a 19. Te esperamos.",
+    "hashtags": ["#villacrespo", "#cafedeespecialidad", "#brumacafe", "#cafedebarrio", "#buenosaires"]
+  }
+}

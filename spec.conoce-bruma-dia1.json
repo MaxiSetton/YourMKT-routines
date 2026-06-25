@@ -1,0 +1,104 @@
+{
+  "id": "conoce-bruma-dia1",
+  "carpeta": "bruma-conoce-bruma",
+  "arquetipo": "antes_despues",
+  "formato": "reel",
+  "aspect": "9:16",
+  "fps": 30,
+  "duracion_seg": 12,
+  "marca": {
+    "nombre": "Bruma",
+    "colores": {
+      "primario": "#A0522D",
+      "secundario": "#4B3621",
+      "acento": "#6B8E23",
+      "fondo": "#FFFDD0",
+      "texto": "#3A2A1E",
+      "textoInverso": "#FFFDD0"
+    },
+    "fuenteTitulo": "Fraunces, Georgia, serif",
+    "fuenteTexto": "Montserrat, system-ui, sans-serif"
+  },
+  "escenas": [
+    {
+      "id": "esc1",
+      "rol": "hook",
+      "t_in": 0,
+      "t_out": 4,
+      "sync_word_idx": 7,
+      "scrim": "bottom",
+      "enfasis": { "texto": "grados", "sfx": "subdrop", "sfx_archivo": "bruma-conoce-bruma/sfx-subdrop.wav" },
+      "visual": {
+        "intencion": "Frame 0 = vapor llenando el cuadro: el reel arranca con movimiento, sin intro. Puro feeling sensorial del frío de afuera, todavía sin mostrar el local.",
+        "fuentes": [
+          { "tipo": "video_generado", "archivo": "bruma-conoce-bruma/gen-vapor-taza.mp4", "base": "imagen_generada", "prompt": "extreme close-up of steam rising and curling from a hot coffee cup, warm side light against a dark moody background, shallow depth of field, no faces, no text, no logos, photoreal editorial, low saturation, warm earthy tones, film grain, vertical 9:16", "prompt_movimiento": "slow dolly-in while steam billows and curls upward filling the frame, gentle volumetric light flicker, cinematic, building", "negative": "morphing, warping, distortion, flickering, jitter, shaky camera, text, watermark, faces, hands" },
+          { "tipo": "kenburns", "archivo": "bruma-conoce-bruma/gen-vapor-taza.jpg" }
+        ]
+      },
+      "overlays": [
+        { "componente": "BrandTag", "props": { "nombre": "Bruma", "lugar": "Villa Crespo" } },
+        { "componente": "PopUp", "props": { "texto": "6°", "sub": "afuera", "posicion": "tr", "color": "primario", "rotacion": -3 } }
+      ]
+    },
+    {
+      "id": "esc2",
+      "rol": "contexto",
+      "t_in": 4,
+      "t_out": 8.5,
+      "sync_word_idx": 21,
+      "scrim": "bottom",
+      "enfasis": { "texto": "tostado", "sfx": "pop", "sfx_archivo": "bruma-conoce-bruma/sfx-pop.wav" },
+      "visual": {
+        "intencion": "Contraste frío/calor: ventana con vaho, calle fría y azulada afuera, interior cálido y dorado adentro. El payoff sensorial del refugio, sin revelar todavía el espacio (eso es el Día 2).",
+        "fuentes": [
+          { "tipo": "video_generado", "archivo": "bruma-conoce-bruma/gen-ventana-vaho.mp4", "base": "imagen_generada", "prompt": "foggy cafe window seen from inside, cold blue blurred street outside, warm golden interior glow, condensation droplets sliding on the glass, no faces, no text, photoreal moody winter, low saturation, film grain, vertical 9:16", "prompt_movimiento": "slow push toward the glass as a droplet slides down and the warm glow blooms, handheld micro-movement, cinematic, warming", "negative": "morphing, warping, distortion, flickering, jitter, shaky camera, text, watermark, faces, hands, readable signage" },
+          { "tipo": "kenburns", "archivo": "bruma-conoce-bruma/gen-ventana-vaho.jpg" }
+        ]
+      },
+      "overlays": [
+        { "componente": "LowerThird", "props": { "texto": "Café de especialidad", "sub": "Villa Crespo, todo el invierno" } }
+      ]
+    },
+    {
+      "id": "esc3",
+      "rol": "cta",
+      "t_in": 8.5,
+      "t_out": 12,
+      "sync_word_idx": 29,
+      "scrim": "full",
+      "enfasis": { "texto": "Bruma", "sfx": "pop", "sfx_archivo": "bruma-conoce-bruma/sfx-pop.wav" },
+      "visual": {
+        "intencion": "Loop al vapor: vuelve al plano del vapor (mismo encuadre que el frame 0) para que el reel reinicie sin costura, con la tarjeta de marca + CTA suave encima.",
+        "fuentes": [
+          { "tipo": "video_generado", "archivo": "bruma-conoce-bruma/gen-vapor-taza.mp4" },
+          { "tipo": "kenburns", "archivo": "bruma-conoce-bruma/gen-vapor-taza.jpg" }
+        ]
+      },
+      "overlays": [
+        { "componente": "CTA", "props": { "titulo": "Bruma", "accento": "entrá en calor", "sub": "Río de Janeiro 655 · de 8 a 19" } }
+      ]
+    }
+  ],
+  "audio": {
+    "modo": "propio",
+    "voz": {
+      "texto": "Afuera, seis grados. Y vos, apurando el paso. Pero hay una puerta, en Villa Crespo… que adentro huele a café recién tostado. Bruma. Guardalo para tu próxima escapada del frío.",
+      "voz_tts": "es-AR-TomasNeural",
+      "rate": "0.82"
+    },
+    "musica": {
+      "src": "bruma-conoce-bruma/music-refugio.mp3",
+      "volumen": 0.45,
+      "mood": "lofi cálido acústico de invierno, lento, con cuerpo — no sleepy",
+      "duck": true
+    },
+    "sfx": [
+      { "tipo": "ambience", "archivo": "bruma-conoce-bruma/sfx-ambiente-cafe.wav", "corte": "esc2", "vol": 0.25 }
+    ]
+  },
+  "subtitulos": { "auto": true, "estilo": "karaoke", "maxPalabras": 4 },
+  "copy": {
+    "caption": "Café de especialidad en Villa Crespo. Afuera, el frío. Acá adentro, una taza que humea y un lugar para quedarte un rato largo.\n\nBruma — Río de Janeiro 655. Guardalo para cuando necesites entrar en calor.",
+    "hashtags": ["#cafedeespecialidad", "#villacrespo", "#brumacafe", "#cafedebarrio", "#invierno"]
+  }
+}

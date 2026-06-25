@@ -1,0 +1,64 @@
+{
+  "id": "conoce-bruma-dia5",
+  "formato": "carrusel",
+  "aspect": "4:5",
+  "carpeta": "bruma-conoce-bruma",
+  "marca": {
+    "nombre": "Bruma",
+    "colores": {
+      "primario": "#A0522D",
+      "secundario": "#4B3621",
+      "acento": "#6B8E23",
+      "fondo": "#FFFDD0",
+      "texto": "#3A2A1E",
+      "textoInverso": "#FFFDD0"
+    },
+    "fuenteTitulo": "Fraunces, Georgia, serif",
+    "fuenteTexto": "Montserrat, system-ui, sans-serif"
+  },
+  "slides": [
+    {
+      "variante": "portada",
+      "kicker": "Aviso honesto",
+      "titulo": "Se terminan\na las 11.",
+      "cuerpo": "Las medialunas las hacemos cada mañana. Cuando se acaban, se acaban — no es marketing.",
+      "swipe": "deslizá →"
+    },
+    {
+      "variante": "concepto",
+      "kicker": "El clásico",
+      "titulo": "Flat white",
+      "cuerpo": "El mejor del barrio, según nosotros (y unos cuantos clientes). Con latte art, siempre.",
+      "foto": "bruma-conoce-bruma/carta-flatwhite.jpg"
+    },
+    {
+      "variante": "concepto",
+      "kicker": "Recién horneadas",
+      "titulo": "Medialunas caseras",
+      "cuerpo": "Tanda fresca cada mañana. Por eso vuelan antes del mediodía.",
+      "foto": "bruma-conoce-bruma/carta-medialunas.jpg"
+    },
+    {
+      "variante": "concepto",
+      "kicker": "Sin TACC",
+      "titulo": "También sin TACC",
+      "cuerpo": "Para que nadie se quede afuera de la mesa."
+    },
+    {
+      "variante": "concepto",
+      "kicker": "Vegano",
+      "titulo": "Y opciones veganas",
+      "cuerpo": "Leches vegetales y algo dulce sin ingredientes de origen animal."
+    },
+    {
+      "variante": "cierre",
+      "titulo": "Pedí tu flat white\nantes de las 11.",
+      "cuerpo": "Río de Janeiro 655, Villa Crespo.",
+      "pie": "@bruma.cafe · de 8 a 19"
+    }
+  ],
+  "copy": {
+    "caption": "Las medialunas de Bruma se terminan a las 11. No es un truco de escasez: las hacemos cada mañana, tanda fresca, y cuando se acaban se acaban.\n\nMientras tanto: el flat white con latte art, opciones sin TACC y veganas para que nadie se quede afuera.\n\nPedí el tuyo antes de las 11. Río de Janeiro 655, Villa Crespo.",
+    "hashtags": ["#flatwhite", "#medialunas", "#villacrespo", "#brumacafe", "#sintacc"]
+  }
+}
