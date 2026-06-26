@@ -44,6 +44,10 @@ const wh = ASPECT_WH[spec.aspect] ?? ASPECT_WH["9:16"];
 const carpeta = spec.carpeta ? String(spec.carpeta).replace(/\/+$/, "") : null;
 const assetsDir = carpeta ? path.join(publicDir, carpeta) : publicDir;
 await mkdir(assetsDir, { recursive: true });
+// El `archivo` del spec puede venir pelado (relativo a la carpeta) o YA con el prefijo de la carpeta
+// (p.ej. "bruma-conoce-bruma/gen-x.jpg"). Normalizamos a ruta relativa a public/ para no doblar el prefijo.
+const relPath = (archivo) => (carpeta && archivo.startsWith(carpeta + "/")) ? archivo : (carpeta ? `${carpeta}/${archivo}` : archivo);
+const destOf = (archivo) => path.join(publicDir, relPath(archivo));
 // Lista public/ RECURSIVAMENTE (rutas relativas con "/"): el asset puede estar en cualquier subcarpeta.
 const walk = (dir, base = dir) => readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
   const full = path.join(dir, e.name);
@@ -97,8 +101,10 @@ for (const job of imgJobs.values()) {
     }
   } catch (e) { fail(e); }
   const ibuf = Buffer.from(await out.arrayBuffer());
-  await writeFile(path.join(assetsDir, job.archivo), ibuf);
-  publicFiles.push((carpeta ? carpeta + "/" : "") + job.archivo); // visible para la deteccion de base del i2v
+  const idst = destOf(job.archivo);
+  await mkdir(path.dirname(idst), { recursive: true });
+  await writeFile(idst, ibuf);
+  publicFiles.push(relPath(job.archivo)); // visible para la deteccion de base del i2v
   console.log(`  ok: ${(ibuf.length / 1e6).toFixed(2)} MB en ${((Date.now() - t0) / 1000).toFixed(0)}s`);
 }
 
@@ -152,7 +158,9 @@ for (const job of vidJobs.values()) {
     }
   } catch (e) { fail(e); }
   const vbuf = Buffer.from(await out.arrayBuffer());
-  await writeFile(path.join(assetsDir, job.archivo), vbuf);
+  const vdst = destOf(job.archivo);
+  await mkdir(path.dirname(vdst), { recursive: true });
+  await writeFile(vdst, vbuf);
   console.log(`  ok: ${(vbuf.length / 1e6).toFixed(2)} MB en ${((Date.now() - t0) / 1000).toFixed(0)}s`);
 }
 
