@@ -6,6 +6,12 @@ Dos modos: **barrido diario** (trigger Horario, ej. 5am · sin params → produc
 pendientes del día, de todos los negocios) o **pieza puntual** (trigger API/n8n · con params → produce
 o itera una sola). **Itera** con observaciones (re-genera un clip, cambia la música, re-renderiza) y re-publica.
 
+> 🔴 **Regla de oro — subir todo a la web, SÍ O SÍ.** Cada corrida es un **clone efímero**: lo que no
+> quede en **Supabase** se PIERDE al terminar la sesión. **Cada** pieza producida tiene que quedar
+> **publicada** — media en Storage + `posts.media_url` seteado (`publish:*`), no solo en `out/`.
+> **Publicá pieza por pieza apenas la terminás** (no al final del barrido). **Incluso las degradadas**
+> (sin voz, con placeholder) se publican igual + se marca qué faltó — nunca dejes una pieza terminada sin subir.
+
 > Esta etapa **no tiene skill**: es el pipeline determinista (Remotion + ffmpeg + OmniVoice). Tu
 > trabajo es **ejecutar la cadena en el orden correcto** y resolver lo que falte. No re-dirijas la
 > pieza (eso es la Routine 2); si el spec está mal, devolvelo a la Routine 2.

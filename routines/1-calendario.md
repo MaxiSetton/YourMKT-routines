@@ -4,6 +4,12 @@
 entra a la base, ve todo lo del negocio y la campaña, y produce el calendario — qué pieza va cada
 día (rol, formato, ángulo, hook, CTA) y **qué assets se le piden al usuario**.
 
+> 🔴 **Regla de oro — subir todo a la web, SÍ O SÍ.** Cada corrida es un **clone efímero**: lo que no
+> quede en **Supabase** se PIERDE al terminar la sesión. No termines con el trabajo solo en archivos
+> locales. Acá: el calendario tiene que quedar **sembrado en la DB** (`seed:calendar` → posts +
+> `campaign_assets`), no solo en `calendar.<slug>.json`. **Verificá** que los posts existan en la DB
+> antes de cerrar. Si algo salió parcial, subí lo que haya + dejá la nota.
+
 > Dirige esta etapa la skill **`campaign-director`** (en `.claude/skills/`). No improvises el
 > calendario "a mano": invocá la skill, ella aplica el método (arco, pilares, balance de formatos,
 > reels topeados, anclas humanas, cohesión visual, QC adversarial). Los scripts de acá solo ejecutan.

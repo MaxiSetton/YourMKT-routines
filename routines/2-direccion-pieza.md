@@ -5,6 +5,12 @@ concepto, guion, escena por escena, gráficos y audio → escribe el `spec` vali
 Por defecto dirige **TODAS** las piezas de la campaña de una; con `dia` dirige (o re-piensa) **una sola**.
 **Itera** una pieza puntual cuando el usuario manda observaciones.
 
+> 🔴 **Regla de oro — subir todo a la web, SÍ O SÍ.** Cada corrida es un **clone efímero**: lo que no
+> quede en **Supabase** se PIERDE al terminar la sesión. El `spec` de **cada** pieza dirigida tiene que
+> quedar en **`posts.spec`** (PATCH), no solo en `spec.<id>.json` local. **En batch, persistí pieza por
+> pieza apenas la dirigís** (no al final): si la sesión se corta, las ya dirigidas quedan guardadas.
+> Verificá el PATCH antes de pasar a la siguiente.
+
 > Esta etapa la dirigen **4 skills** de `.claude/skills/`, y trabajan juntas alrededor del spec:
 > - **`guionista`** — escribe el GUION (lo que se dice), partido en beats, para el oído.
 > - **`reel-director`** — INTEGRA: concepto con tensión, hook al primer frame, cortes al beat, y por
